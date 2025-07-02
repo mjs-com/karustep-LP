@@ -1,2 +1,1256 @@
+/* ===========================
+   CSS Reset & Base Styles
+   =========================== */
 
-/*# sourceMappingURL=style.css.map */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px */
+    background-color: #c4d0da; /* 両側の空白部分をグレーに */
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   Container & Layout
+   =========================== */
+
+.container {
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2c5f7a;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* ===========================
+   Buttons & CTAs
+   =========================== */
+
+.cta-button {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    margin: 1rem;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    padding: calc(1.5rem + 2px) 3rem;
+}
+
+/* ホバーエフェクトはJavaScript（GSAP）で制御 */
+
+.cta-button.secondary {
+    background: white;
+    color: #4a90e2;
+    border: 2px solid #4a90e2;
+}
+
+.cta-button.secondary:hover {
+    background: #4a90e2;
+    color: white;
+}
+
+.cta-button.large {
+    padding: 2rem 2rem;
+    font-size: 2.4rem;
+}
+
+.cta-button.primary.large {
+    padding: 1rem calc(2rem + 2px) 1rem;
+}
+
+.cta-button .sub-text {
+    font-size: 2.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: -0.5rem;
+    display: block;
+}
+
+/* ===========================
+   1. Hero Section
+   =========================== */
+
+.hero {
+    position: relative;
+    height: 80vh;  /* フォールバック */
+    height: 80dvh; /* モバイル最適化 */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.hero-container {
+    width: 100%;
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* ヒーローセクションのサイズ（80vh）に合わせる */
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 横幅いっぱいに表示、必要に応じて上下をクロップ */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* ヒーローセクションのサイズに合わせる */
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.hero-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 4;  /* オーバーレイとコンテンツより前面に表示 */
+}
+
+.hero-logo img {
+    height: 65px;  /* ロゴの高さを指定 */
+    width: auto;
+    filter: drop-shadow(2px 2px 5px rgb(255, 255, 255));   /* 視認性向上のためのシャドウ */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0;
+    color: white;
+    height: 80vh;  /* フォールバック */
+    height: 80dvh; /* モバイル最適化 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* コンテンツを下部に配置 */
+    align-items: center;
+}
+
+.hero-text-overlay {
+    position: relative;
+    background: rgba(5, 5, 41, 0.483);
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 4.0rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ヒーローセクションCTAボタンの光るアニメーション */
+.hero-cta .cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ボタンテキストを光の前面に表示 */
+
+.hero-cta .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent
+    );
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.hero-cta .cta-button:hover::before {
+    left: 100%;
+}
+
+.hero-cta .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* スティッキーフッターCTAボタンの光るアニメーション */
+.sticky-footer .cta-button.primary {
+    position: relative;
+    overflow: hidden;
+    padding: calc(0.5rem + 2px) 6rem;
+}
+
+.sticky-footer .cta-button.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent
+    );
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.sticky-footer .cta-button.primary:hover::before {
+    left: 100%;
+}
+
+.sticky-footer .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* ===========================
+   導入実績セクション
+   =========================== */
+
+.social-proof-section {
+    padding: 0.5rem 0;
+    background: white;  /* 真っ白に変更 */
+    text-align: center;
+}
+
+.social-proof-section .container {
+    padding: 0;  /* 両サイドのpaddingを0に */
+}
+
+.social-proof-text {
+    display: block;
+    max-width: 30%; 
+    height: auto;      /* 縦横比を維持 */
+    margin: 8px auto;  /* 中央配置 + 下マージン */
+    object-fit: contain;  /* 画像の縦横比を保持 */
+}
+
+.clinic-logos {
+    overflow: hidden;
+    width: 100%;
+    height: 10dvh;
+}
+
+.clinic-logo-scroll {
+    display: flex;
+    gap: 2rem;  /* 画像間の間隔 */
+    width: fit-content;  /* コンテンツに合わせて自動調整 */
+    /* アニメーションはJavaScriptで動的に設定 */
+}
+
+.clinic-logo-scroll img {
+    height: 10dvh;
+    width: auto;  /* 縦横比を自然に保持 */
+    object-fit: contain;  /* 縦横比を維持 */
+    flex-shrink: 0;  /* 画像の収縮を防ぐ */
+    flex-grow: 0;  /* 画像の拡大を防ぐ */
+}
+
+/* 動的に生成されるキーフレーム用のベース */
+@keyframes clinic-scroll {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(var(--scroll-distance, -400px));
+    }
+}
+
+/* ===========================
+   2. Problems Section
+   =========================== */
+
+.problems {
+    padding: 6rem 0;
+    background: #f4f8ff;  /* さわやかな淡い水色 */
+}
+
+.problems-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-item:hover {
+    transform: translateY(-2px);
+}
+
+.problem-item i {
+    color: #e74c3c;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.problem-item p {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* ===========================
+   3. Solution Section
+   =========================== */
+
+.solution {
+    padding: 6rem 0;
+    background: white;
+}
+
+.solution-content {
+    text-align: center;
+}
+
+.before-after {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.before, .after {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.before {
+    background: #ffe5e5;
+    border: 2px solid #ff6b6b;
+}
+
+.after {
+    background: #e8f5e8;
+    border: 2px solid #51cf66;
+}
+
+.before h3, .after h3 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.before img, .after img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a90e2;
+    font-size: 3rem;
+    transform: rotate(90deg);
+}
+
+.solution-intro {
+    text-align: center;
+}
+
+.solution-intro .logo {
+    width: 90%;       /* コンテナ幅いっぱいに表示 */
+    max-width: 90%;   /* コンテナからはみ出さない */
+    height: auto;      /* 縦横比を維持 */
+    margin: 0 auto 2rem;
+}
+
+.solution-description {
+    font-size: 1.8rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ===========================
+   4. How It Works Section
+   =========================== */
+
+.how-it-works {
+    padding: 6rem 0;
+    background: #f4f8ff;  /* より淡い水色に統一 */
+}
+
+.demo-video {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.demo-video video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.step {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+    color: white;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.step h3 {
+    color: #2c5f7a;
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: #666;
+    margin: 0;
+}
+
+/* ===========================
+   5. Benefits Section
+   =========================== */
+
+.benefits {
+    padding: 6rem 0;
+    background: white;
+}
+
+.benefits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+    color: white;
+    border-radius: 50%;
+    font-size: 3rem;
+    margin: 0 auto 2rem;
+}
+
+.benefit-card h3 {
+    color: #2c5f7a;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card p {
+    color: #666;
+    margin: 0;
+}
+
+/* ===========================
+   6. Testimonials Section
+   =========================== */
+
+.testimonials {
+    padding: 6rem 0;
+    background: #f4f8ff;  /* より淡い水色に統一 */
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    object-fit: cover;
+}
+
+.testimonial-card blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #2c5f7a;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-card blockquote::before,
+.testimonial-card blockquote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.testimonial-card cite {
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.security-info {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.security-info h3 {
+    color: #2c5f7a;
+    margin-bottom: 1rem;
+}
+
+.security-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.security-logos img {
+    height: 40px;
+    opacity: 0.8;
+}
+
+/* ===========================
+   7. USP Section
+   =========================== */
+
+.usp {
+    padding: 6rem 0;
+    background: white;
+}
+
+.usp-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.usp-card {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.usp-card h3 {
+    color: #2c5f7a;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.usp-card h3 i {
+    color: #4a90e2;
+}
+
+.usp-card p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+    background: #f8f9fa;
+    font-weight: 700;
+    color: #2c5f7a;
+}
+
+.comparison-table .highlight {
+    background: #e8f5e8;
+    color: #2c5f7a;
+    font-weight: 700;
+}
+
+.usp-card img {
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto 0;
+    border-radius: 10px;
+}
+
+/* ===========================
+   8. Pricing Section
+   =========================== */
+
+.pricing {
+    padding: 6rem 0;
+    background: #f4f8ff;  /* より淡い水色に統一 */
+}
+
+.pricing-card {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 3px solid #4a90e2;
+}
+
+.price-main {
+    margin-bottom: 3rem;
+}
+
+.price-label {
+    display: block;
+    background: #e74c3c;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.price-amount {
+    display: block;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #2c5f7a;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    display: block;
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-note {
+    display: block;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.included-items {
+    margin-bottom: 3rem;
+}
+
+.included-items h3 {
+    color: #2c5f7a;
+    margin-bottom: 2rem;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 1rem;
+}
+
+.item p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+.running-cost {
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+.running-cost p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   9. FAQ Section
+   =========================== */
+
+.faq {
+    padding: 6rem 0;
+    background: white;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c5f7a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    padding: 0 2rem 2rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ===========================
+   10. Closing Section
+   =========================== */
+
+.closing {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #2c5f7a, #4a90e2);
+    color: white;
+    text-align: center;
+}
+
+.closing .section-title {
+    color: white;
+}
+
+.closing-text {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    opacity: 0.95;
+}
+
+.closing-cta {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info {
+    opacity: 0.9;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-info i {
+    font-size: 1.8rem;
+}
+
+/* ===========================
+   Sticky Footer
+   =========================== */
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);  /* 初期状態で非表示 */
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border-top: 2px solid #4a90e2;
+    transition: transform 0.3s ease;  /* スムーズなアニメーション */
+}
+
+.sticky-footer-content {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    min-height: 60px;
+    margin: 0;
+}
+
+.sticky-footer .cta-button {
+    font-size: 2.0rem;
+    padding: 0.5rem 6rem;
+    flex: none;
+    max-width: 250px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* ===========================
+   Modal Styles
+   =========================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;  /* フォールバック */
+    max-height: 90dvh; /* モバイル最適化 */
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-title {
+    color: #2c5f7a;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #2c5f7a;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (min-width: 480px) {
+    .hero-cta {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .before-after {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .arrow {
+        transform: rotate(0deg);
+    }
+
+    .steps {
+        flex-direction: row;
+    }
+
+    .benefits-grid {
+        flex-direction: row;
+    }
+
+    .testimonial-grid {
+        flex-direction: row;
+    }
+
+    .usp-grid {
+        flex-direction: row;
+    }
+
+    .closing-cta {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-proof-text {
+        max-width: 20vh;  /* スマホ版では20vhに調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-logo {
+        top: 1.5rem;
+        left: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .cta-button.large {
+        padding: 1.5rem 2.5rem;
+        font-size: 2.0rem;
+    }
+
+    .sticky-footer .cta-button {
+        font-size: 2.0rem;
+        padding: 0.2rem 2rem;
+    }
+
+    .sticky-footer .cta-button.primary {
+        padding: calc(0.2rem + 2px) 2rem;
+    }
+
+    .price-amount {
+        font-size: 3.2rem;
+    }
+
+    .modal-content {
+        padding: 2rem;
+    }
+
+    /* クリニックロゴスクロールはJavaScriptで動的制御するため、固定制約なし */
+}
+
+/* ===========================
+   Animation Classes
+   =========================== */
+
+.slide-in-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease;
+}
+
+.slide-in-top.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right.fast {
+    transition: all 0.4s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease;
+}
+
+.scale-in.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===========================
+   Utilities
+   =========================== */
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
