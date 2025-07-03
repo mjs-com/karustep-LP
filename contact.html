@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ｜カルステップ</title>
+    <meta name="description" content="カルステップに関するお問い合わせフォーム。資料請求、製品デモ、技術的なご質問など、お気軽にお問い合わせください。">
+    
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="お問い合わせ｜カルステップ">
+    <meta property="og:description" content="カルステップに関するお問い合わせフォーム。資料請求、製品デモ、技術的なご質問など、お気軽にお問い合わせください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karustep.github.io/contact.html">
+    <meta property="og:image" content="https://karustep.github.io/img/karustep-hero-img.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/karustep-logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 62.5%;
+            background-color: #c4d0da;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+        }
+        
+        .header p {
+            font-size: 1.6rem;
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .back-link:hover {
+            opacity: 0.7;
+        }
+        
+        .contact-container {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-content h2 {
+            color: #2c5f7a;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .contact-content p {
+            margin-bottom: 3rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+                 .form-container {
+             width: 100%;
+             margin-bottom: 3rem;
+             border-radius: 15px;
+             overflow: hidden;
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+         }
+         
+         .form-fallback {
+             text-align: center;
+             padding: 2rem;
+             background: #f8f9fa;
+             border-radius: 15px;
+             margin-top: 2rem;
+         }
+         
+         .form-fallback p {
+             margin-bottom: 1.5rem;
+             color: #666;
+         }
+         
+         .form-button {
+             display: inline-block;
+             background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+             color: white;
+             padding: 1.5rem 3rem;
+             border-radius: 50px;
+             text-decoration: none;
+             font-weight: 700;
+             font-size: 1.6rem;
+             box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+             transition: all 0.3s ease;
+         }
+         
+         .form-button:hover {
+             transform: translateY(-2px);
+             box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+         }
+        
+        .contact-info {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .contact-info h3 {
+            color: #2c5f7a;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .contact-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .contact-info i {
+            color: #4a90e2;
+            font-size: 1.6rem;
+        }
+
+        .contact-info a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #2c5f7a;
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #2c5f7a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .back-link {
+                top: 1.5rem;
+                left: 1.5rem;
+            }
+            
+            .contact-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .form-button {
+                padding: 1.5rem 2.5rem;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            ホームに戻る
+        </a>
+        <h1>お問い合わせ</h1>
+        <p>カルステップに関するご質問・ご相談</p>
+    </div>
+    
+    <div class="contact-container">
+        <div class="contact-content">
+            <h2>お気軽にお問い合わせください</h2>
+            <p>
+                資料請求、製品デモ、技術的なご質問など、<br>
+                カルステップに関するあらゆるご相談を承っております。<br>
+                下記のフォームからお問い合わせください。
+            </p>
+            
+            <!-- Googleフォーム埋め込み -->
+            <div class="form-container">
+                <iframe 
+                    src="https://forms.gle/rVRtgdzCzVUxh4DAA" 
+                    width="100%" 
+                    height="800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    style="border-radius: 15px;">
+                    読み込んでいます…
+                </iframe>
+            </div>
+            
+            <div class="form-fallback">
+                <p>フォームが正常に表示されない場合は、<br>下記のリンクからお問い合わせください。</p>
+                <a href="https://forms.gle/rVRtgdzCzVUxh4DAA" class="form-button" target="_blank" rel="noopener noreferrer">
+                    別ウィンドウでフォームを開く
+                </a>
+            </div>
+            
+                            <div class="contact-info">
+                    <h3>その他のお問い合わせ方法</h3>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mjsc0mpa2@gmail.com">mjsc0mpa2@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                        <a href="https://twitter.com/Dr_kurukuru" target="_blank" rel="noopener noreferrer">@Dr_kurukuru</a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-headset"></i>
+                        サポート：チャット・Web面談対応
+                    </p>
+                </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 カルステップ. All rights reserved.</p>
+    </div>
+    
+    <script>
+        // 自動リダイレクト（オプション）
+        // 3秒後に自動でGoogleフォームに遷移させたい場合は以下のコメントアウトを外してください
+        // setTimeout(() => {
+        //     window.open('https://forms.gle/rVRtgdzCzVUxh4DAA', '_blank');
+        // }, 3000);
+    </script>
+</body>
+</html>

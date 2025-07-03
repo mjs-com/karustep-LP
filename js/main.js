@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // FAQ アコーディオンの初期化
     initializeFAQ();
     
-    // モーダルの初期化
-    initializeModal();
+
     
     // スティッキーフッターの初期化
     initializeStickyFooter();
@@ -30,23 +29,53 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===========================
 
 function initializeAnimations() {
-    // テキストを一文字ずつ分割する関数
+    // テキストを一文字ずつ分割する関数（ハイライトクラスを保持）
     function splitTextToChars(element) {
-        const text = element.textContent;
+        const chars = [];
+        const childNodes = Array.from(element.childNodes);
+        
+        // 元の内容をクリア
         element.innerHTML = '';
         
-        for (let i = 0; i < text.length; i++) {
-            const char = text[i];
-            const span = document.createElement('span');
-            span.textContent = char;
-            span.style.display = 'inline-block';
-            if (char === ' ') {
-                span.innerHTML = '&nbsp;'; // スペースを保持
+        // 各子ノードを処理
+        childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                // 通常のテキストノード
+                const text = node.textContent;
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    span.style.display = 'inline-block';
+                    
+                    if (char === ' ') {
+                        span.innerHTML = '&nbsp;';
+                    }
+                    
+                    element.appendChild(span);
+                    chars.push(span);
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('highlight-text')) {
+                // ハイライトテキストノード
+                const text = node.textContent;
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    span.style.display = 'inline-block';
+                    span.classList.add('highlight-text'); // ハイライトクラスを追加
+                    
+                    if (char === ' ') {
+                        span.innerHTML = '&nbsp;';
+                    }
+                    
+                    element.appendChild(span);
+                    chars.push(span);
+                }
             }
-            element.appendChild(span);
-        }
+        });
         
-        return element.children;
+        return chars;
     }
 
     // ヒーローセクションのテキストアニメーション
@@ -62,7 +91,7 @@ function initializeAnimations() {
     
     // タイトルの一文字ずつアニメーション
     heroTL.from(titleChars, {
-        duration: 2,
+        duration: 1.7,
         y: -30,  // 上から出現
         opacity: 0,
         stagger: 0.05,  // 0.05秒間隔で順次表示
@@ -70,7 +99,7 @@ function initializeAnimations() {
     })
     // サブタイトルの一文字ずつアニメーション  
     .from(subtitleChars, {
-        duration: 1.2,
+        duration: 1.0,
         y: -20,  // 上から出現
         opacity: 0,
         stagger: 0.03,  // 0.03秒間隔で順次表示
@@ -308,8 +337,8 @@ function initializeAnimations() {
         });
     });
 
-    // カードのホバーアニメーション
-    document.querySelectorAll('.benefit-card, .testimonial-card, .usp-card').forEach(card => {
+    // カードのホバーアニメーション（benefit-cardは除外）
+    document.querySelectorAll('.testimonial-card, .usp-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
             gsap.to(card, {
                 duration: 0.3,
@@ -382,122 +411,7 @@ function initializeFAQ() {
     });
 }
 
-// ===========================
-// Modal Management
-// ===========================
 
-function initializeModal() {
-    const modal = document.getElementById('contact-modal');
-    const modalTriggers = document.querySelectorAll('.cta-button.secondary');
-    const modalClose = document.querySelector('.modal-close');
-    const contactForm = document.getElementById('contact-form');
-
-    // モーダルを開く
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
-    });
-
-    // モーダルを閉じる
-    modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // ESCキーでモーダルを閉じる
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            closeModal();
-        }
-    });
-
-    function openModal() {
-        document.body.classList.add('no-scroll');
-        modal.style.display = 'flex';
-        
-        gsap.timeline()
-            .to(modal, {
-                duration: 0.3,
-                opacity: 1,
-                ease: 'power2.out'
-            })
-            .fromTo('.modal-content', 
-                { scale: 0.8, opacity: 0 },
-                { 
-                    duration: 0.4,
-                    scale: 1,
-                    opacity: 1,
-                    ease: 'back.out(1.7)'
-                },
-                '-=0.1'
-            );
-        
-        setTimeout(() => modal.classList.add('show'), 10);
-    }
-
-    function closeModal() {
-        gsap.timeline()
-            .to('.modal-content', {
-                duration: 0.3,
-                scale: 0.8,
-                opacity: 0,
-                ease: 'power2.in'
-            })
-            .to(modal, {
-                duration: 0.2,
-                opacity: 0,
-                ease: 'power2.in',
-                onComplete: () => {
-                    modal.style.display = 'none';
-                    modal.classList.remove('show');
-                    document.body.classList.remove('no-scroll');
-                }
-            }, '-=0.1');
-    }
-
-    // フォーム送信の処理
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // フォームバリデーション
-        const formData = new FormData(contactForm);
-        const clinicName = formData.get('clinic-name');
-        const doctorName = formData.get('doctor-name');
-        const email = formData.get('email');
-
-        if (!clinicName || !doctorName || !email) {
-            alert('必須項目をすべて入力してください。');
-            return;
-        }
-
-        // メールアドレスの簡単なバリデーション
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('正しいメールアドレスを入力してください。');
-            return;
-        }
-
-        // 送信処理（実際のプロダクションでは適切なエンドポイントに送信）
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        submitButton.textContent = '送信中...';
-        submitButton.disabled = true;
-
-        // 実際の送信処理をここに追加
-        setTimeout(() => {
-            alert('資料請求を受け付けました。ありがとうございます！');
-            contactForm.reset();
-            closeModal();
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }, 2000);
-    });
-}
 
 // ===========================
 // Sticky Footer
