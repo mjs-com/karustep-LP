@@ -42,19 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.0rem;
+    font-size: 3.2rem;
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 3.0rem;
 }
 
 h3 {
-    font-size: 2.4rem;
-}
-
-p {
-    margin-bottom: 1rem;
+    font-size: 2.6rem;
 }
 
 /* ===========================
@@ -386,10 +382,9 @@ h2.section-title {
 
 .problems {
     min-height: 70vh;
-    padding: 2rem 0;
     background: #f4f8ff;  /* さわやかな淡い水色 */
     display: flex;
-    align-items: center;
+    align-items: stretch;  /* centerからstretchに変更 */
     box-sizing: border-box;
 }
 
@@ -400,38 +395,35 @@ h2.section-title {
     flex-direction: column;
     padding: 0 2rem;
     box-sizing: border-box;
-    height: 100%;
+    min-height: 70vh;  /* containerに高さを設定 */
 }
 
 .problems .section-title {
-    margin-bottom: 1.5rem !important;
-    margin-top: 0 !important;
-    flex-shrink: 0;
+    margin: 3rem 0 !important;
+    flex-shrink: 0;  /* 固定サイズを維持 */
     padding: 0;
+    font-size: 3rem;
 }
 
 .problems-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    display: flex;           /* flexboxを復活 */
+    flex-direction: column;  /* 縦方向に配置 */
+    flex: 1;                /* 残りの空間をすべて占有 */
+    gap: 1rem;
     margin: 0;
     padding: 0;
     width: 100%;
-    flex: 1;
 }
 
 .problem-item {
     display: flex;
     align-items: center;
     background: white;
-    padding: 1.2rem 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     width: 100%;
-    flex: 1;
-    min-height: 5rem;
-    max-height: 6rem;
 }
 
 .problem-item:hover {
@@ -443,10 +435,6 @@ h2.section-title {
     font-size: 2rem;
     margin-right: 1.5rem;
     flex-shrink: 0;
-}
-
-.problem-item p {
-    font-size: 1.6rem;
 }
 
 /* ===========================
