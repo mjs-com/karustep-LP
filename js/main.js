@@ -91,7 +91,7 @@ function initializeAnimations() {
     
     // タイトルの一文字ずつアニメーション
     heroTL.from(titleChars, {
-        duration: 1.7,
+        duration: 1.5,
         y: -30,  // 上から出現
         opacity: 0,
         stagger: 0.05,  // 0.05秒間隔で順次表示
@@ -99,7 +99,7 @@ function initializeAnimations() {
     })
     // サブタイトルの一文字ずつアニメーション  
     .from(subtitleChars, {
-        duration: 1.0,
+        duration: 0.8,
         y: -20,  // 上から出現
         opacity: 0,
         stagger: 0.03,  // 0.03秒間隔で順次表示
@@ -107,12 +107,12 @@ function initializeAnimations() {
          }, '-=0.3')
      // CTAボタンのアニメーション
      .fromTo('.hero-cta .cta-button', {
-         x: 100,  // 右側の位置からスタート
+         y: 10,  // 右側の位置からスタート
          opacity: 0,  // 非表示からスタート
          scale: 1  // スケールを明確に設定
      }, {
-         duration: 0.8,  // 少しゆっくりに
-         x: 0,  // 中央の位置
+         duration: 0.8,//少しゆっくりに
+         y: 0,  // 中央の位置
          opacity: 1,  // 表示
          scale: 1,  // 通常サイズ
          ease: 'power3.out'
