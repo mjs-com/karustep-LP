@@ -49,6 +49,12 @@
             "@type": "Product",
             "name": "カルステップ",
             "description": "フットスイッチ操作による医療支援AIシュライバー。足で踏むだけでハンズフリー録音・AI要約・自動転記を実現し、医師の理想の診察をサポートします。",
+            "image": [
+                "https://mjs-com.github.io/karustep-LP/img/karustep-logo-with-title.png",
+                "https://mjs-com.github.io/karustep-LP/img/item1_foot_pedal.jpg",
+                "https://mjs-com.github.io/karustep-LP/img/item2_microphone.png",
+                "https://mjs-com.github.io/karustep-LP/img/after-using-karustep.jpg"
+            ],
             "brand": {
                 "@type": "Brand",
                 "name": "カルステップ"
@@ -58,11 +64,47 @@
                 "price": "33000",
                 "priceCurrency": "JPY",
                 "availability": "https://schema.org/InStock",
-                "url": "https://buy.stripe.com/4gM7sLeOVc0x7RL2av7ok00"
+                "url": "https://buy.stripe.com/4gM7sLeOVc0x7RL2av7ok00",
+                "priceValidUntil": "2025-12-31",
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "JP",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 30,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0",
+                        "currency": "JPY"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "JP"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 5,
+                            "unitCode": "DAY"
+                        }
+                    }
+                }
             },
             "category": "医療機器・医療システム",
             "audience": {
-                "@type": "Audience",
+                "@type": "PeopleAudience",
                 "audienceType": "医師・医療従事者"
             }
         }
@@ -74,7 +116,6 @@
         <div class="hero-container">
             <div class="hero-image">
                 <img src="img/karustep-hero-img.jpg" alt="医師と患者が穏やかに向き合っている診察の様子" loading="eager">
-                <div class="hero-overlay"></div>
             </div>
             <div class="hero-logo">
                 <img src="img/karustep-logo-with-title.png" alt="カルステップ" loading="eager">
@@ -124,19 +165,15 @@
             <div class="problems-list">
                 <div class="problem-item">
                     <i class="fas fa-check-circle"></i>
-                    <p>診察後の記録作業で、帰宅が遅くなってしまう</p>
-                </div>
-                <div class="problem-item">
-                    <i class="fas fa-check-circle"></i>
                     <p>カルテ入力に気を取られ、患者さんの顔を見る時間が減っている</p>
                 </div>
                 <div class="problem-item">
                     <i class="fas fa-check-circle"></i>
-                    <p>記録の抜け漏れやタイプミスが心配で、何度も見直してしまう</p>
+                    <p>診察後の記録作業で、帰宅が遅くなってしまう</p>
                 </div>
                 <div class="problem-item">
                     <i class="fas fa-check-circle"></i>
-                    <p>PCが苦手で、文字入力自体がストレスになっている</p>
+                    <p>パソコンが苦手で、文字入力自体がストレスになっている</p>
                 </div>
                 <div class="problem-item">
                     <i class="fas fa-check-circle"></i>
