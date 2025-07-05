@@ -6,29 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // GSAP初期化
     gsap.registerPlugin(ScrollTrigger);
     
-    // アニメーション初期化
-    initializeAnimations();
-    
-    // FAQ アコーディオンの初期化
+    // すべてのアニメーションを初期化
+    initializeHeroAnimations();
     initializeFAQ();
-    
-
-    
-    // スティッキーフッターの初期化
     initializeStickyFooter();
-    
-    // スムーススクロールの初期化
     initializeSmoothScroll();
-    
-    // クリニックロゴスクロールの初期化
     initializeClinicLogoScroll();
+    initializeScrollAnimations();
 });
 
 // ===========================
 // GSAP Animations
 // ===========================
 
-function initializeAnimations() {
+function initializeHeroAnimations() {
     // テキストを一文字ずつ分割する関数（ハイライトクラスを保持）
     function splitTextToChars(element) {
         const chars = [];
@@ -82,49 +73,52 @@ function initializeAnimations() {
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     
-    // テキストを一文字ずつ分割
-    const titleChars = splitTextToChars(heroTitle);
-    const subtitleChars = splitTextToChars(heroSubtitle);
-    
-    // タイムラインを作成
-    const heroTL = gsap.timeline();
-    
-    // タイトルの一文字ずつアニメーション
-    heroTL.from(titleChars, {
-        duration: 1.5,
-        y: -30,  // 上から出現
-        opacity: 0,
-        stagger: 0.05,  // 0.05秒間隔で順次表示
-        ease: 'power3.out'
-    })
-    // サブタイトルの一文字ずつアニメーション  
-    .from(subtitleChars, {
-        duration: 0.8,
-        y: -20,  // 上から出現
-        opacity: 0,
-        stagger: 0.03,  // 0.03秒間隔で順次表示
-        ease: 'power3.out'
-         }, '-=0.3')
-     // CTAボタンのアニメーション
-     .fromTo('.hero-cta .cta-button', {
-         y: 10,  // 右側の位置からスタート
-         opacity: 0,  // 非表示からスタート
-         scale: 1  // スケールを明確に設定
-     }, {
-         duration: 0.8,//少しゆっくりに
-         y: 0,  // 中央の位置
-         opacity: 1,  // 表示
-         scale: 1,  // 通常サイズ
-         ease: 'power3.out'
-     }, '-=0.2');
+    if (heroTitle && heroSubtitle) {
+        // テキストを一文字ずつ分割
+        const titleChars = splitTextToChars(heroTitle);
+        const subtitleChars = splitTextToChars(heroSubtitle);
+        
+        // タイムラインを作成
+        const heroTL = gsap.timeline();
+        
+        // タイトルの一文字ずつアニメーション
+        heroTL.from(titleChars, {
+            duration: 1.5,
+            y: -30,
+            opacity: 0,
+            stagger: 0.05,
+            ease: 'power3.out'
+        })
+        // サブタイトルの一文字ずつアニメーション  
+        .from(subtitleChars, {
+            duration: 0.8,
+            y: -20,
+            opacity: 0,
+            stagger: 0.03,
+            ease: 'power3.out'
+        }, '-=0.3')
+        // CTAボタンのアニメーション
+        .fromTo('.hero-cta .cta-button', {
+            y: 10,
+            opacity: 0,
+            scale: 1
+        }, {
+            duration: 0.8,
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            ease: 'power3.out'
+        }, '-=0.2');
+    }
+}
 
+function initializeScrollAnimations() {
     // セクションタイトルのアニメーション
     gsap.utils.toArray('.section-title').forEach(title => {
         gsap.from(title, {
             scrollTrigger: {
                 trigger: title,
                 start: 'top 80%',
-                end: 'bottom 20%',
                 toggleActions: 'play none none reverse'
             },
             duration: 0.8,
@@ -134,229 +128,143 @@ function initializeAnimations() {
         });
     });
 
-    // プロブレムアイテムのスタガーアニメーション
-    gsap.from('.problem-item', {
+    // 解決策セクションの矢印アニメーション
+    gsap.from('.solution .arrow img', {
         scrollTrigger: {
-            trigger: '.problems-list',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
+            trigger: '.solution .arrow',
+            start: 'top 70%', // 要素の上端がビューポートの80%の位置に来たら開始
+            toggleActions: 'play none none none' // 1回だけ再生
         },
-        duration: 0.6,
-        y: 30,
+        y: -100,
         opacity: 0,
-        stagger: 0.2,
-        ease: 'power3.out'
-    });
-
-    // Before/Afterのアニメーション
-    gsap.from('.before', {
-        scrollTrigger: {
-            trigger: '.before-after',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        x: -50,
-        opacity: 0,
-        ease: 'power3.out'
-    });
-
-    gsap.from('.after', {
-        scrollTrigger: {
-            trigger: '.before-after',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        x: 50,
-        opacity: 0,
-        ease: 'power3.out',
-        delay: 0.3
-    });
-
-    gsap.from('.arrow', {
-        scrollTrigger: {
-            trigger: '.before-after',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.6,
-        scale: 0,
-        opacity: 0,
-        ease: 'back.out(1.7)',
-        delay: 0.6
+        duration: 1,
+        ease: 'power2.out'
     });
 
     // Stepsのアニメーション
-    gsap.from('.step', {
-        scrollTrigger: {
-            trigger: '.steps',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 50,
-        opacity: 0,
-        stagger: 0.3,
-        ease: 'power3.out'
+    gsap.utils.toArray('.step').forEach((step, index) => {
+        gsap.from(step, {
+            scrollTrigger: {
+                trigger: step,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            delay: index * 0.2,
+            ease: 'power3.out'
+        });
     });
 
     // ベネフィットカードのアニメーション
-    gsap.from('.benefit-card', {
-        scrollTrigger: {
-            trigger: '.benefits-grid',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 50,
-        opacity: 0,
-        stagger: 0.2,
-        ease: 'power3.out'
+    gsap.utils.toArray('.benefit-card').forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            delay: index * 0.2,
+            ease: 'power3.out'
+        });
     });
 
     // 証言カードのアニメーション
-    gsap.from('.testimonial-card', {
-        scrollTrigger: {
-            trigger: '.testimonial-grid',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 50,
-        opacity: 0,
-        stagger: 0.3,
-        ease: 'power3.out'
+    gsap.utils.toArray('.testimonial-card').forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            delay: index * 0.3,
+            ease: 'power3.out'
+        });
     });
 
     // USPカードのアニメーション
-    gsap.from('.usp-card', {
-        scrollTrigger: {
-            trigger: '.usp-grid',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 50,
-        opacity: 0,
-        stagger: 0.2,
-        ease: 'power3.out'
+    gsap.utils.toArray('.usp-card').forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            delay: index * 0.2,
+            ease: 'power3.out'
+        });
     });
 
     // 価格カードのアニメーション
-    gsap.from('.pricing-card', {
-        scrollTrigger: {
-            trigger: '.pricing-card',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 1,
-        scale: 0.8,
-        opacity: 0,
-        ease: 'back.out(1.7)'
-    });
+    if (document.querySelector('.pricing-card')) {
+        gsap.from('.pricing-card', {
+            scrollTrigger: {
+                trigger: '.pricing-card',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 1,
+            scale: 0.8,
+            opacity: 0,
+            ease: 'back.out(1.7)'
+        });
+    }
 
     // FAQアイテムのアニメーション
-    gsap.from('.faq-item', {
-        scrollTrigger: {
-            trigger: '.faq-list',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.6,
-        y: 30,
-        opacity: 0,
-        stagger: 0.15,
-        ease: 'power3.out'
+    gsap.utils.toArray('.faq-item').forEach((item, index) => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.6,
+            y: 30,
+            opacity: 0,
+            delay: index * 0.15,
+            ease: 'power3.out'
+        });
     });
 
     // クロージングセクションのアニメーション
-    gsap.from('.closing-text', {
-        scrollTrigger: {
-            trigger: '.closing',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 30,
-        opacity: 0,
-        ease: 'power3.out'
-    });
-
-    gsap.from('.closing-cta', {
-        scrollTrigger: {
-            trigger: '.closing',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        },
-        duration: 0.8,
-        y: 30,
-        opacity: 0,
-        ease: 'power3.out',
-        delay: 0.3
-    });
-
-    // CTAボタンのホバーアニメーション（ヒーローセクション以外）
-    document.querySelectorAll('.cta-button').forEach(button => {
-        // ヒーローセクション内のCTAボタンは除外
-        if (button.closest('.hero-cta')) return;
-        button.addEventListener('mouseenter', () => {
-            if (!button.classList.contains('animating')) {
-                button.classList.add('animating');
-                gsap.to(button, {
-                    duration: 0.3,
-                    scale: 1.05,
-                    ease: 'power2.out',
-                    onComplete: () => button.classList.remove('animating')
-                });
-            }
+    if (document.querySelector('.closing-text')) {
+        gsap.from('.closing-text', {
+            scrollTrigger: {
+                trigger: '.closing',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            ease: 'power3.out'
         });
+    }
 
-        button.addEventListener('mouseleave', () => {
-            if (!button.classList.contains('animating')) {
-                button.classList.add('animating');
-                gsap.to(button, {
-                    duration: 0.3,
-                    scale: 1,
-                    ease: 'power2.out',
-                    onComplete: () => button.classList.remove('animating')
-                });
-            }
+    if (document.querySelector('.closing-cta')) {
+        gsap.from('.closing-cta', {
+            scrollTrigger: {
+                trigger: '.closing',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            ease: 'power3.out',
+            delay: 0.3
         });
-    });
-
-    // カードのホバーアニメーション（benefit-cardは除外）
-    document.querySelectorAll('.testimonial-card, .usp-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            gsap.to(card, {
-                duration: 0.3,
-                y: -10,
-                boxShadow: '0 12px 30px rgba(0, 0, 0, 0.15)',
-                ease: 'power2.out'
-            });
-        });
-
-        card.addEventListener('mouseleave', () => {
-            gsap.to(card, {
-                duration: 0.3,
-                y: 0,
-                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-                ease: 'power2.out'
-            });
-        });
-    });
+    }
 }
 
 // ===========================
@@ -370,48 +278,50 @@ function initializeFAQ() {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
         
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // すべてのFAQアイテムを閉じる
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    gsap.to(otherAnswer, {
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // すべてのFAQアイテムを閉じる
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        if (otherAnswer) {
+                            gsap.to(otherAnswer, {
+                                duration: 0.3,
+                                maxHeight: 0,
+                                ease: 'power2.inOut'
+                            });
+                        }
+                    }
+                });
+                
+                // クリックされたアイテムを開く/閉じる
+                if (isActive) {
+                    item.classList.remove('active');
+                    gsap.to(answer, {
                         duration: 0.3,
                         maxHeight: 0,
                         ease: 'power2.inOut'
                     });
+                } else {
+                    item.classList.add('active');
+                    gsap.set(answer, { maxHeight: 'none' });
+                    const height = answer.scrollHeight;
+                    gsap.fromTo(answer, 
+                        { maxHeight: 0 },
+                        { 
+                            duration: 0.3,
+                            maxHeight: height + 'px',
+                            ease: 'power2.inOut'
+                        }
+                    );
                 }
             });
-            
-            // クリックされたアイテムを開く/閉じる
-            if (isActive) {
-                item.classList.remove('active');
-                gsap.to(answer, {
-                    duration: 0.3,
-                    maxHeight: 0,
-                    ease: 'power2.inOut'
-                });
-            } else {
-                item.classList.add('active');
-                gsap.set(answer, { maxHeight: 'none' });
-                const height = answer.scrollHeight;
-                gsap.fromTo(answer, 
-                    { maxHeight: 0 },
-                    { 
-                        duration: 0.3,
-                        maxHeight: height + 'px',
-                        ease: 'power2.inOut'
-                    }
-                );
-            }
-        });
+        }
     });
 }
-
-
 
 // ===========================
 // Sticky Footer
@@ -422,69 +332,78 @@ function initializeStickyFooter() {
     const heroSection = document.getElementById('hero');
     const closingSection = document.getElementById('closing');
     
+    if (!stickyFooter) return;
+    
+    // reviews.htmlページの場合（heroSectionがない場合）
+    if (!heroSection) {
+        let showFooter = false;
+        
+        // 少し遅延をつけてフッターを表示開始
+        setTimeout(() => {
+            showFooter = true;
+            updateFooterVisibility();
+        }, 1000);
+        
+        function updateFooterVisibility() {
+            const closingVisible = closingSection && 
+                closingSection.getBoundingClientRect().top < window.innerHeight;
+            
+            if (showFooter && !closingVisible) {
+                stickyFooter.style.transform = 'translateX(-50%) translateY(0%)';
+            } else {
+                stickyFooter.style.transform = 'translateX(-50%) translateY(100%)';
+            }
+        }
+        
+        // スクロール時にclosingセクションを監視
+        window.addEventListener('scroll', updateFooterVisibility);
+        
+        // closingセクションの監視
+        if (closingSection) {
+            const closingObserver = new IntersectionObserver(() => {
+                updateFooterVisibility();
+            }, { threshold: 0.1 });
+            
+            closingObserver.observe(closingSection);
+        }
+        
+        return;
+    }
+    
+    // index.htmlページの場合（既存のロジック）
     let showFooter = false;
     
     // ヒーローセクションが見えなくなったらフッター表示
     const heroObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // ヒーローセクションが見えている間は非表示
                 showFooter = false;
                 stickyFooter.style.transform = 'translateX(-50%) translateY(100%)';
             } else {
-                // ヒーローセクションが見えなくなったら表示可能
                 showFooter = true;
                 updateFooterVisibility();
             }
         });
-    }, {
-        threshold: 0.1
-    });
-    
-    // クロージングセクションが見えている間は非表示
-    const closingObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            updateFooterVisibility();
-        });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
     
     function updateFooterVisibility() {
         const closingVisible = closingSection && 
             closingSection.getBoundingClientRect().top < window.innerHeight;
         
         if (showFooter && !closingVisible) {
-            // 少し遅延してからレイアウト計算
-            setTimeout(() => {
-                requestAnimationFrame(() => {
-                    // レイアウトを強制再計算
-                    stickyFooter.offsetHeight;
-                    const content = stickyFooter.querySelector('.sticky-footer-content');
-                    if (content) {
-                        content.offsetWidth; // 幅計算を強制
-                    }
-                    requestAnimationFrame(() => {
-                        // 中央配置を明示的に強制
-                        stickyFooter.style.display = 'block';
-                        stickyFooter.style.transform = 'translateX(-50%) translateY(0%)';
-                        // フレックスボックスの再計算を強制
-                        if (content) {
-                            content.style.display = 'flex';
-                        }
-                    });
-                });
-            }, 100); // 100ms遅延
+            stickyFooter.style.transform = 'translateX(-50%) translateY(0%)';
         } else {
             stickyFooter.style.transform = 'translateX(-50%) translateY(100%)';
         }
     }
 
-    if (heroSection) {
-        heroObserver.observe(heroSection);
-    }
+    heroObserver.observe(heroSection);
     
     if (closingSection) {
+        const closingObserver = new IntersectionObserver(() => {
+            updateFooterVisibility();
+        }, { threshold: 0.1 });
+        
         closingObserver.observe(closingSection);
     }
 }
@@ -494,89 +413,21 @@ function initializeStickyFooter() {
 // ===========================
 
 function initializeSmoothScroll() {
-    // 内部リンクのスムーススクロール
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             
             if (target) {
-                const offsetTop = target.offsetTop - 80; // ヘッダー分のオフセット
-                
-                gsap.to(window, {
-                    duration: 1,
-                    scrollTo: {
-                        y: offsetTop,
-                        autoKill: false
-                    },
-                    ease: 'power2.inOut'
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 }
-
-// ===========================
-// Utility Functions
-// ===========================
-
-// 数値のカウントアップアニメーション
-function animateCounter(element, endValue, duration = 2) {
-    const obj = { value: 0 };
-    
-    gsap.to(obj, {
-        duration: duration,
-        value: endValue,
-        ease: 'power2.out',
-        onUpdate: () => {
-            element.textContent = Math.round(obj.value).toLocaleString();
-        }
-    });
-}
-
-// レスポンシブ対応のチェック
-function checkResponsive() {
-    const isMobile = window.innerWidth <= 768;
-    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
-    
-    return {
-        isMobile,
-        isTablet,
-        isDesktop: !isMobile && !isTablet
-    };
-}
-
-// パフォーマンス最適化のための遅延読み込み
-function initializeLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src || img.src;
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-
-        images.forEach(img => imageObserver.observe(img));
-    }
-}
-
-// ページロード完了時の追加処理
-window.addEventListener('load', () => {
-    // 遅延読み込みの初期化
-    initializeLazyLoading();
-    
-    // パフォーマンス測定
-    if ('performance' in window) {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`Page load time: ${loadTime}ms`);
-    }
-});
 
 // ===========================
 // Clinic Logo Scroll
@@ -588,7 +439,7 @@ function initializeClinicLogoScroll() {
 
     const images = scrollContainer.querySelectorAll('img');
     const totalImages = images.length;
-    const originalImageCount = totalImages / 2; // 7枚（複製を除く）
+    const originalImageCount = totalImages / 2;
     
     // 全ての画像が読み込まれるまで待つ
     Promise.all(
@@ -600,23 +451,16 @@ function initializeClinicLogoScroll() {
             });
         })
     ).then(() => {
-        // 最初の7枚の画像の幅を計算
         let totalWidth = 0;
-        const gapInPx = parseFloat(getComputedStyle(scrollContainer).gap) || 32; // 2rem = 32px (default)
+        const gapInPx = parseFloat(getComputedStyle(scrollContainer).gap) || 32;
         
         for (let i = 0; i < originalImageCount; i++) {
             totalWidth += images[i].offsetWidth;
-            // 7枚すべてに対してgapを追加（最後の画像と2回目先頭の間のgapも含む）
             totalWidth += gapInPx;
         }
         
-        // CSS変数として設定
         scrollContainer.style.setProperty('--scroll-distance', `-${totalWidth}px`);
-        
-        // アニメーションを開始
         scrollContainer.style.animation = 'clinic-scroll 40s linear infinite';
-        
-        console.log(`Clinic logo scroll initialized: ${totalWidth}px distance`);
     });
 }
 
@@ -625,10 +469,7 @@ let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // ScrollTriggerのリフレッシュ
         ScrollTrigger.refresh();
-        
-        // クリニックロゴスクロールも再計算
         initializeClinicLogoScroll();
     }, 250);
 });
