@@ -196,6 +196,11 @@
             opacity: 0.8;
         }
         
+        /* デスクトップ版のみで表示する汎用クラス */
+        .desktop-only {
+            display: inline;
+        }
+
         @media (max-width: 480px) {
             .contact-container {
                 padding: 2rem 1.5rem;
@@ -203,6 +208,20 @@
             
             .form-button {
                 padding: 1.5rem 2.5rem;
+                font-size: 1.6rem;
+            }
+
+            /* モバイル版ではdesktop-onlyを非表示 */
+            .desktop-only {
+                display: none;
+            }
+
+            /* Contact Info Mobile - 左側の余白を調整、フォントサイズを16pxに */
+            .contact-info p {
+                padding-left: 5rem;
+                font-size: 1.6rem;
+            }
+            .contact-info a {
                 font-size: 1.6rem;
             }
         }
@@ -232,7 +251,7 @@
             <h2>お気軽にお問い合わせください</h2>
             <p>
                 資料請求、製品デモ、技術的なご質問など、<br>
-                カルステップに関するあらゆるご相談を承っております。<br>
+                カルステップに関する<span class="desktop-only">あらゆる</span>ご相談を承っております。<br>
                 下記のフォームからお問い合わせください。
             </p>
             

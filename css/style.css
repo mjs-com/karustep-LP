@@ -45,6 +45,16 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;  /* すべてのmarginをリセット */
 }
 
+/* モバイル版のみで改行を表示する汎用クラス */
+.mobile-only {
+    display: none;
+}
+
+/* デスクトップ版のみで表示する汎用クラス */
+.desktop-only {
+    display: inline;
+}
+
 h1 {
     font-size: 3.2rem;
 }
@@ -871,14 +881,14 @@ h3 {
 }
 
 .doctor-name {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #2c5f7a;
     margin: 0 0 0.5rem 0;
 }
 
 .clinic-name {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #4a90e2;
     font-weight: 600;
     margin: 0;
@@ -1003,7 +1013,7 @@ h3 {
 
 .pricing-card {
     background: white;
-    padding: 4rem 3rem;
+    padding: 4rem 1rem;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
@@ -1151,7 +1161,7 @@ h3 {
 }
 
 .faq-answer p {
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 0;
     color: #666;
     margin: 0;
 }
@@ -1290,13 +1300,18 @@ h3 {
     padding: 0 0 0 10rem;
 }
 
+.contact-info h4{
+    text-align: left;
+}
+
+
 .contact-info p {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-    font-size: 2.0rem;
+    font-size: 1.6rem;
 }
 
 .contact-info i {
@@ -1307,7 +1322,7 @@ h3 {
     color: #ffffff;
     text-decoration: underline;
     transition: color 0.3s ease;
-    font-size: 2.0rem;
+    font-size: 1.6rem;
 }
 
 .contact-info a:hover {
@@ -1508,7 +1523,7 @@ h3 {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .cta-button {
@@ -1561,7 +1576,7 @@ h3 {
     }
 
     .feature-point span {
-        font-size: 1.4rem;
+        font-size: 2.0rem;
     }
 
     /* Testimonial Section Mobile */
@@ -1574,19 +1589,73 @@ h3 {
         height: 60px;
     }
 
-    .doctor-name {
+
+    .testimonial-content p {
         font-size: 1.6rem;
     }
 
-    .clinic-name {
-        font-size: 1.2rem;
+    .usp-card h3 {
+        font-size: 2.2rem;
     }
 
-    .testimonial-content p {
+    /* Problems Section Mobile - section-title を一回り小さく */
+    .problems .section-title {
+        font-size: 2.1rem;
+    }
+
+    /* モバイル版のみで改行を表示する汎用クラス */
+    .mobile-only {
+        display: inline;
+    }
+
+    /* How-it-works Section Mobile - step padding を調整 */
+    .step {
+        padding: 1rem 2rem;
+    }
+
+    /* Table Mobile - 全体的にフォントサイズを小さく */
+    .comparison-table th,
+    .comparison-table td {
         font-size: 1.4rem;
+        padding: 1rem 0.5rem;
     }
 
+    .step p {
+        margin: 0;
+    }
+
+    /* Closing Section Mobile - CTAボタン間の隙間を狭く */
+    .closing-cta {
+        gap: 1rem;
+    }
+
+    /* Contact Info Mobile - 左側の余白を調整 */
+    .contact-info {
+        padding: 0 5rem 0 5rem;
+    }
+    /* デスクトップ版のみで表示する汎用クラス - モバイル版では非表示 */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Reviews Page Mobile - page-subtitle を左寄せ */
+    .page-subtitle {
+        text-align: left;
+    }
+
+    /* Reviews Page Mobile - review-rating を中央揃え */
+    .review-rating {
+        justify-content: center;
+    }
+    
     /* クリニックロゴスクロールはJavaScriptで動的制御するため、固定制約なし */
+    
+    .faq-answer p {
+        padding: 0 2rem 0;
+        color: #666;
+        margin: 0;
+    }
+
 }
 
 /* ===========================
@@ -2070,6 +2139,7 @@ h3 {
     font-size: 1.8rem;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* 基本要件セクション */
@@ -2527,13 +2597,13 @@ h3 {
 
 /* FAQ用のリンクボタン */
 .faq-link-button {
-    margin-top: 1rem;
+
     text-align: center;
 }
 
 .cta-button.small {
     padding: 1rem 2rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 /* レスポンシブ対応 */
@@ -2559,6 +2629,15 @@ h3 {
     .support-content {
         grid-template-columns: 1fr;
     }
+    
+    .spreadsheet .security-info {
+        padding: 2rem 1.5rem;
+    }
+
+    .spreadsheet .security-info h3 {
+        font-size: 2.5rem;
+    }
+
 
     .cta-buttons {
         flex-direction: column;
