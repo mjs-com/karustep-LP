@@ -803,7 +803,7 @@ h3 {
 
 .benefit-card {
     text-align: center;
-    padding: 1rem 1rem;
+    padding: 1rem 0 1rem 1rem;
     background: #f8f9fa;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1594,23 +1594,42 @@ h3 {
         font-size: 1.6rem;
     }
 
+    .usp-card {
+        padding: 3rem 0.5rem;
+     }
+
     .usp-card h3 {
         font-size: 2.2rem;
     }
 
+    .usp-card p {
+        font-size: 1.6rem;
+    }
+
+
+
     /* Problems Section Mobile - section-title を一回り小さく */
     .problems .section-title {
-        font-size: 2.1rem;
+        font-size: 2rem;
+    }
+
+    .problems .container {
+        padding: 0 1.5rem;
     }
 
     /* モバイル版のみで改行を表示する汎用クラス */
     .mobile-only {
         display: inline;
     }
+    
+    .solution-description {
+        font-size: 1.6rem;
+    }
+
 
     /* How-it-works Section Mobile - step padding を調整 */
     .step {
-        padding: 1rem 2rem;
+        padding: 1rem 0 1rem 2rem;
     }
 
     /* Table Mobile - 全体的にフォントサイズを小さく */
@@ -1639,8 +1658,10 @@ h3 {
     }
 
     /* Reviews Page Mobile - page-subtitle を左寄せ */
-    .page-subtitle {
+    .page-title-section .page-subtitle {
         text-align: left;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* Reviews Page Mobile - review-rating を中央揃え */
@@ -1655,6 +1676,11 @@ h3 {
         color: #666;
         margin: 0;
     }
+
+    .important-notes .note-text {
+        font-size: 1.6rem;
+    }
+
 
 }
 
@@ -1864,7 +1890,7 @@ h3 {
 .review-card {
     background: white;
     border-radius: 20px;
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border: 2px solid #f8f9fa;
     transition: all 0.3s ease;
