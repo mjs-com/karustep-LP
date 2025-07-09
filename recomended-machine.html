@@ -41,6 +41,18 @@
 
     <!-- style.css -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+    .legal-links {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -237,51 +249,36 @@
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-section">
-            <div class="container">
-                <h2 class="section-title">環境確認・お問い合わせ</h2>
-                <p class="cta-text">
-                    ご不明な点がございましたら、<br>
-                    お気軽にお問い合わせください。<br>
-                    動作環境の確認や導入相談を承ります。
-                </p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="cta-button primary large">お問い合わせ</a>
-                    <a href="index.html" class="cta-button secondary large">ホームに戻る</a>
-                </div>
-            </div>
         </section>
     </main>
 
-    <!-- フッター -->
-    <footer class="footer">
+    <!-- クロージング（最終行動喚起） -->
+    <section id="closing" class="closing">
         <div class="container">
+            <h2 class="section-title">環境確認・お問い合わせ</h2>
+            <p class="closing-text">
+                ご不明な点がございましたら、<br>
+                お気軽にお問い合わせください。<br>
+                動作環境の確認や導入相談を承ります。
+            </p>
+            <div class="closing-cta">
+                <a href="contact.html" class="cta-button primary large">お問い合わせ</a>
+                <a href="index.html" class="cta-button secondary large">ホームに戻る</a>
+            </div>
             <div class="contact-info">
-                <h4 style="margin-bottom: 1rem;">その他のお問い合わせ方法</h4>
-                <p>
-                    <i class="fas fa-globe"></i>
-                    <a href="https://mjs-com.github.io/MJScompany/" target="_blank" rel="noopener noreferrer">会社ホームページ</a>
-                </p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:mjsc0mpa2@gmail.com">mjsc0mpa2@gmail.com</a>
-                </p>
-                <p>
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                    <a href="https://twitter.com/Dr_kurukuru" target="_blank" rel="noopener noreferrer">@Dr_kurukuru</a>
-                </p>
-                <p>
-                    <i class="fa-solid fa-headset"></i>
-                    サポート：チャット・Web面談<span class="desktop-only">対応</span>
-                </p>
+                <h4>お気軽にお問い合わせください</h4>
+                <p><i class="fas fa-globe"></i><a href="https://mjs-com.github.io/MJScompany/" target="_blank" rel="noopener noreferrer">会社ホームページ</a></p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:mjsc0mpa2@gmail.com">mjsc0mpa2@gmail.com</a></p>
+                <p><i class="fa-brands fa-square-x-twitter"></i><a href="https://twitter.com/Dr_kurukuru" target="_blank" rel="noopener noreferrer">@Dr_kurukuru</a></p>
+                <p><i class="fa-solid fa-headset"></i> サポート：チャット・Web面談<span class="desktop-only">対応</span></p>
+            </div>
+            <div class="legal-links">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <span class="separator">｜</span>
+                <a href="tokutei-syotorihiki.html">特定商取引法に基づく表記</a>
             </div>
         </div>
-    </footer>
-    
-    <div class="footer" style="text-align: center;">
-        <p>&copy; 2025 カルステップ. All rights reserved.</p>
-    </div>
+    </section>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>

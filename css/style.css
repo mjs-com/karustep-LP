@@ -1356,6 +1356,30 @@ h3 {
     text-decoration: underline;
 }
 
+.legal-links {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.legal-links .separator {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0.5rem;
+}
+
 /* ===========================
    Sticky Footer
    =========================== */
@@ -1694,6 +1718,22 @@ h3 {
     .contact-info {
         padding: 0 5rem 0 5rem;
     }
+    
+    /* Legal Links Mobile */
+    .legal-links {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .legal-links a {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .legal-links .separator {
+        margin: 0 0.3rem;
+    }
+    
     /* デスクトップ版のみで表示する汎用クラス - モバイル版では非表示 */
     .desktop-only {
         display: none;
@@ -2726,5 +2766,272 @@ h3 {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+}
+
+/* ===========================
+   Page Footer
+   =========================== */
+
+.page-footer {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    margin-top: 0;
+}
+
+.page-footer .container {
+    padding: 0 2rem;
+}
+
+.footer-links {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+.footer-links .separator {
+    color: #ccc;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .page-footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-links {
+        font-size: 1.2rem;
+    }
+    
+    .footer-links a {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .footer-links .separator {
+        margin: 0 0.3rem;
+    }
+}
+
+/* ===========================
+   Policy & Terms Pages
+   =========================== */
+
+.privacy-policy-content,
+.tokutei-syotorihiki-content {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.policy-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.policy-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.policy-section h2 {
+    color: #2c5f7a;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #4a90e2;
+}
+
+.policy-section h3 {
+    color: #2c5f7a;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.policy-section h3 i {
+    color: #4a90e2;
+    font-size: 1.6rem;
+}
+
+.policy-section p {
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.policy-list li {
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.policy-list li::before {
+    content: "•";
+    color: #4a90e2;
+    font-weight: bold;
+    position: absolute;
+    left: 0.5rem;
+}
+
+.sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 1rem;
+}
+
+.sub-list li {
+    padding-left: 1.5rem;
+}
+
+.sub-list li::before {
+    content: "− ";
+    color: #999;
+}
+
+.contact-details {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* 特定商取引法のテーブルスタイル */
+.tokutei-table {
+    margin-bottom: 3rem;
+}
+
+.terms-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.terms-table th,
+.terms-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.terms-table th {
+    background: #f8f9fa;
+    color: #2c5f7a;
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 30%;
+    vertical-align: top;
+}
+
+.terms-table td {
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.terms-table tr:last-child th,
+.terms-table tr:last-child td {
+    border-bottom: none;
+}
+
+.terms-table a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.terms-table a:hover {
+    text-decoration: underline;
+}
+
+.return-policy {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #e9ecef;
+}
+
+.important-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.important-note h3 {
+    color: #856404;
+}
+
+.important-note h3 i {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .terms-table th,
+    .terms-table td {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+    
+    .terms-table th {
+        width: 35%;
+    }
+    
+    .policy-section h2 {
+        font-size: 2rem;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.6rem;
+    }
+    
+    .policy-section p,
+    .policy-list li {
+        font-size: 1.4rem;
+    }
+    
+    .contact-details,
+    .return-policy,
+    .important-note {
+        padding: 1.5rem;
     }
 }
