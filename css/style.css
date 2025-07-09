@@ -1967,6 +1967,10 @@ h3 {
     flex-shrink: 0;
 }
 
+.review-header img.img-top-align {
+    object-position: top;
+}
+
 .review-profile {
     flex: 1;
 }
