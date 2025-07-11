@@ -2054,6 +2054,13 @@ h3 {
     object-position: top;
 }
 
+.review-header img.clinic-logo {
+    border-radius: 0;
+    object-fit: contain;
+    object-position: left center;
+    padding: 1rem;
+}
+
 .review-profile {
     flex: 1;
 }
