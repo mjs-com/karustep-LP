@@ -636,6 +636,34 @@ h3 {
     text-align: left;
 }
 
+/* YouTube Demo Video in How-it-works Section */
+.demo-youtube-video {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.demo-youtube-video h3 {
+    color: #2c5f7a;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.demo-youtube-video h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #4a90e2, #2c5f7a);
+    border-radius: 2px;
+}
+
 /* ===========================
    Spreadsheet Section
    =========================== */
@@ -1696,6 +1724,21 @@ h3 {
     /* How-it-works Section Mobile - step padding を調整 */
     .step {
         padding: 1rem 0 1rem 2rem;
+    }
+
+    /* Demo YouTube Video Mobile */
+    .demo-youtube-video {
+        margin-top: 3rem;
+    }
+
+    .demo-youtube-video h3 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .demo-youtube-video h3::after {
+        width: 40px;
+        height: 2px;
     }
 
     /* Table Mobile - 全体的にフォントサイズを小さく */
