@@ -1,0 +1,286 @@
+/* 移転報告ページ用CSS */
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.migration-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.migration-notice h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.main-message {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.new-url-box {
+    background: #f8f9fa;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-url-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12, #e74c3c);
+    animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.new-url-box h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.new-url-link {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #3498db;
+    text-decoration: none;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid #3498db;
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+.new-url-link:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.redirect-info {
+    margin: 30px 0;
+    padding: 20px;
+    background: #e8f5e8;
+    border-radius: 10px;
+    border-left: 4px solid #2ecc71;
+}
+
+.redirect-info p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.redirect-info p:last-child {
+    margin-bottom: 0;
+}
+
+#countdown {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2em;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid #e74c3c;
+}
+
+.manual-link {
+    color: #666;
+    font-size: 0.95em;
+}
+
+.manual-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.manual-link a:hover {
+    text-decoration: underline;
+}
+
+.cta-button-container {
+    margin: 30px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2ecc71, #3498db);
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .migration-content {
+        padding: 25px;
+    }
+    
+    .migration-notice h1 {
+        font-size: 2em;
+    }
+    
+    .main-message {
+        font-size: 1.1em;
+    }
+    
+    .new-url-box {
+        padding: 20px;
+    }
+    
+    .new-url-link {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    
+    .logo img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .migration-content {
+        padding: 20px;
+    }
+    
+    .migration-notice h1 {
+        font-size: 1.8em;
+    }
+    
+    .main-message {
+        font-size: 1em;
+    }
+    
+    .new-url-box {
+        padding: 15px;
+    }
+    
+    .new-url-link {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        max-width: 200px;
+    }
+}
+
+/* 印刷用スタイル */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .migration-content {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .cta-button {
+        background: #3498db;
+        color: white;
+    }
+} 
