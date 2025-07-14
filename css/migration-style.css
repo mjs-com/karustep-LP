@@ -1,4 +1,4 @@
-/* 移転報告ページ用CSS */
+/* 移転報告ページ用CSS - シンプル版 */
 
 /* リセットCSS */
 * {
@@ -28,7 +28,7 @@ body {
 .migration-content {
     background: white;
     border-radius: 20px;
-    padding: 50px;
+    padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: fadeInUp 0.8s ease-out;
@@ -49,14 +49,23 @@ body {
     margin-bottom: 30px;
 }
 
+.logo-text {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1em;
+}
+
 .logo img {
-    max-width: 300px;
+    max-width: 280px;
     width: 100%;
     height: auto;
 }
 
 .migration-notice h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 20px;
     font-weight: 700;
@@ -66,7 +75,7 @@ body {
 }
 
 .main-message {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 30px;
     line-height: 1.8;
@@ -79,7 +88,6 @@ body {
     padding: 25px;
     margin: 30px 0;
     position: relative;
-    overflow: hidden;
 }
 
 .new-url-box::before {
@@ -90,16 +98,10 @@ body {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12, #e74c3c);
-    animation: rainbow 2s linear infinite;
-}
-
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
 }
 
 .new-url-box h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #2c3e50;
     margin-bottom: 15px;
     font-weight: 600;
@@ -107,7 +109,7 @@ body {
 
 .new-url-link {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: #3498db;
     text-decoration: none;
     background: white;
@@ -135,7 +137,7 @@ body {
 
 .redirect-info p {
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .redirect-info p:last-child {
@@ -145,7 +147,7 @@ body {
 #countdown {
     font-weight: bold;
     color: #e74c3c;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     background: #fff;
     padding: 2px 8px;
     border-radius: 5px;
@@ -154,7 +156,7 @@ body {
 
 .manual-link {
     color: #666;
-    font-size: 0.95em;
+    font-size: 0.95rem;
 }
 
 .manual-link a {
@@ -179,7 +181,7 @@ body {
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -197,7 +199,7 @@ body {
     padding-top: 20px;
     border-top: 1px solid #eee;
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .footer p {
@@ -208,239 +210,26 @@ body {
     margin-bottom: 0;
 }
 
-/* レスポンシブデザイン */
-
-/* PC版 (1200px以上) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1000px;
-    }
-    
-    .migration-content {
-        padding: 60px 80px;
-        display: flex;
-        align-items: center;
-        gap: 60px;
-        text-align: left;
-    }
-    
-    .logo {
-        margin-bottom: 0;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo img {
-        max-width: 400px;
-    }
-    
-    .migration-notice {
-        flex: 1.5;
-        text-align: left;
-    }
-    
-    .migration-notice h1 {
-        font-size: 2.8em;
-        text-align: left;
-        margin-bottom: 25px;
-    }
-    
-    .main-message {
-        font-size: 1.3em;
-        text-align: left;
-        margin-bottom: 35px;
-    }
-    
-    .new-url-box {
-        text-align: center;
-        margin: 35px 0;
-    }
-    
-    .redirect-info {
-        text-align: center;
-        margin: 35px 0;
-    }
-    
-    .cta-button-container {
-        text-align: center;
-        margin: 35px 0;
-    }
-    
-    .footer {
-        text-align: center;
-        margin-top: 40px;
-        border-top: 1px solid #eee;
-        padding-top: 25px;
-    }
-}
-
-/* ノートパソコン版 (992px-1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .container {
-        max-width: 900px;
-    }
-    
-    .migration-content {
-        padding: 50px 60px;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        text-align: left;
-    }
-    
-    .logo {
-        margin-bottom: 0;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo img {
-        max-width: 350px;
-    }
-    
-    .migration-notice {
-        flex: 1.5;
-        text-align: left;
-    }
-    
-    .migration-notice h1 {
-        font-size: 2.6em;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-    
-    .main-message {
-        font-size: 1.25em;
-        text-align: left;
-        margin-bottom: 30px;
-    }
-    
-    .new-url-box {
-        text-align: center;
-        margin: 30px 0;
-    }
-    
-    .redirect-info {
-        text-align: center;
-        margin: 30px 0;
-    }
-    
-    .cta-button-container {
-        text-align: center;
-        margin: 30px 0;
-    }
-    
-    .footer {
-        text-align: center;
-        margin-top: 35px;
-        border-top: 1px solid #eee;
-        padding-top: 20px;
-    }
-}
-
-/* タブレット版 (768px-991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        max-width: 700px;
-    }
-    
-    .migration-content {
-        padding: 40px 50px;
-        gap: 35px;
-    }
-    
-    .migration-notice h1 {
-        font-size: 2.3em;
-    }
-    
-    .main-message {
-        font-size: 1.2em;
-    }
-    
-    .logo img {
-        max-width: 320px;
-    }
-    
-    .new-url-box {
-        padding: 25px;
-    }
-    
-    .new-url-link {
-        font-size: 1.05em;
-        padding: 14px 24px;
-    }
-}
-
-/* スマートフォン (大) 版 (481px-767px) */
-@media (min-width: 481px) and (max-width: 767px) {
+/* タブレット版 (768px以下) */
+@media (max-width: 768px) {
     body {
         padding: 15px;
     }
     
-    .container {
-        max-width: 600px;
+    .migration-content {
+        padding: 30px;
     }
     
-    .migration-content {
-        padding: 30px 35px;
-        gap: 25px;
+    .logo-text {
+        font-size: 2.5rem;
     }
     
     .migration-notice h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
     
     .main-message {
-        font-size: 1.1em;
-    }
-    
-    .logo img {
-        max-width: 280px;
-    }
-    
-    .new-url-box {
-        padding: 20px;
-    }
-    
-    .new-url-link {
-        font-size: 1em;
-        padding: 12px 20px;
-    }
-    
-    .cta-button {
-        padding: 14px 28px;
-        font-size: 1.05em;
-    }
-}
-
-/* スマートフォン (小) 版 (320px-480px) */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .container {
-        max-width: 100%;
-    }
-    
-    .migration-content {
-        padding: 25px;
-        gap: 20px;
-        border-radius: 15px;
-    }
-    
-    .migration-notice h1 {
-        font-size: 1.8em;
-        line-height: 1.3;
-    }
-    
-    .main-message {
-        font-size: 1em;
-        line-height: 1.6;
+        font-size: 1.1rem;
     }
     
     .logo img {
@@ -448,56 +237,42 @@ body {
     }
     
     .new-url-box {
-        padding: 18px;
-        margin: 20px 0;
-    }
-    
-    .new-url-box h2 {
-        font-size: 1.3em;
+        padding: 20px;
     }
     
     .new-url-link {
-        font-size: 0.9em;
-        padding: 10px 15px;
-        word-break: break-all;
-    }
-    
-    .redirect-info {
-        padding: 18px;
-    }
-    
-    .redirect-info p {
-        font-size: 1em;
+        font-size: 1rem;
+        padding: 12px 20px;
     }
     
     .cta-button {
         padding: 12px 24px;
-        font-size: 1em;
-    }
-    
-    .footer {
-        font-size: 0.85em;
+        font-size: 1rem;
     }
 }
 
-/* 超小型デバイス版 (319px以下) */
-@media (max-width: 319px) {
+/* スマートフォン版 (480px以下) */
+@media (max-width: 480px) {
     body {
-        padding: 5px;
+        padding: 10px;
     }
     
     .migration-content {
         padding: 20px;
-        gap: 15px;
-        border-radius: 10px;
+        border-radius: 15px;
+    }
+    
+    .logo-text {
+        font-size: 2rem;
     }
     
     .migration-notice h1 {
-        font-size: 1.6em;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
     
     .main-message {
-        font-size: 0.95em;
+        font-size: 1rem;
     }
     
     .logo img {
@@ -506,16 +281,33 @@ body {
     
     .new-url-box {
         padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .new-url-box h2 {
+        font-size: 1.3rem;
     }
     
     .new-url-link {
-        font-size: 0.85em;
-        padding: 8px 12px;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    
+    .redirect-info {
+        padding: 15px;
+    }
+    
+    .redirect-info p {
+        font-size: 1rem;
     }
     
     .cta-button {
         padding: 10px 20px;
-        font-size: 0.95em;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        font-size: 0.8rem;
     }
 }
 
