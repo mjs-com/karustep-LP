@@ -1566,15 +1566,15 @@ h3 {
 
 
 @media (max-width: 768px) {
-    /* スマホ版ではヒーローセクションを80dvhに */
+    /* スマホ版ではアドレスバー縮小時のジャンプを避けるため80svhを使用 */
     .hero {
         height: 80vh;  /* フォールバック */
-        height: 80dvh; /* スマホ版では80dvhに */
+        height: 80svh; /* 安定したビューポート高さ */
     }
 
     .hero-content {
         height: 80vh;  /* フォールバック */
-        height: 80dvh; /* スマホ版では80dvhに */
+        height: 80svh; /* 安定したビューポート高さ */
     }
 
     .social-proof-text {
@@ -1615,7 +1615,7 @@ h3 {
     }
 
     .sticky-footer .cta-button {
-        font-size: 2.2rem;
+        font-size: 2.0rem;
         padding: 1rem 1.2rem;
         max-width: 170px;
         min-width: 150px;
@@ -1631,8 +1631,8 @@ h3 {
     }
 
     .sticky-footer .cta-button {
-        white-space: normal;
-        line-height: 1.3;
+        white-space: nowrap;
+        line-height: 1.2;
     }
 
     .price-amount {
