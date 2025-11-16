@@ -1296,7 +1296,7 @@ h3 {
 
 /* closing-section専用：primaryボタンの左右余白を広く */
 .closing-cta .cta-button.primary.large {
-    padding: calc(2rem + 2px) calc(2rem + 2px);
+    padding: calc(2rem + 2px);
     position: relative;
     overflow: hidden;
 }
