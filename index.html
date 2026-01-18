@@ -54,7 +54,7 @@
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "SoftwareApplication",
             "name": "カルステップ",
             "alternateName": "karustep",
             "description": "フットスイッチ操作による医療支援AIシュライバー「カルステップ（karustep）」。足で踏むだけでハンズフリー録音・AI要約・自動転記を実現し、医師の理想の診察をサポートします。",
@@ -64,58 +64,28 @@
                 "https://mjs.main.jp/karustep-LP/img/item2_microphone.png",
                 "https://mjs.main.jp/karustep-LP/img/after-using-karustep.jpg"
             ],
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Windows",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "JPY",
+                "description": "無料トライアル実施中"
+            },
             "brand": {
                 "@type": "Brand",
                 "name": "カルステップ"
             },
-            "offers": {
-                "@type": "Offer",
-                "price": "77,000",
-                "priceCurrency": "JPY",
-                "availability": "https://schema.org/InStock",
-                "url": "https://buy.stripe.com/8x228r36d6Gdeg9dTd7ok03",
-                "priceValidUntil": "2025-12-31",
-                "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "JP",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                    "merchantReturnDays": 30,
-                    "returnMethod": "https://schema.org/ReturnByMail",
-                    "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
-                },
-                "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                        "@type": "MonetaryAmount",
-                        "value": "0",
-                        "currency": "JPY"
-                    },
-                    "shippingDestination": {
-                        "@type": "DefinedRegion",
-                        "addressCountry": "JP"
-                    },
-                    "deliveryTime": {
-                        "@type": "ShippingDeliveryTime",
-                        "handlingTime": {
-                            "@type": "QuantitativeValue",
-                            "minValue": 1,
-                            "maxValue": 3,
-                            "unitCode": "DAY"
-                        },
-                        "transitTime": {
-                            "@type": "QuantitativeValue",
-                            "minValue": 2,
-                            "maxValue": 5,
-                            "unitCode": "DAY"
-                        }
-                    }
-                }
-            },
-            "category": "医療機器・医療システム",
             "audience": {
                 "@type": "PeopleAudience",
                 "audienceType": "医師・医療従事者"
-            }
+            },
+            "featureList": [
+                "フットスイッチによるハンズフリー操作",
+                "AI音声認識・自動要約",
+                "電子カルテへの自動転記",
+                "院内リアルタイム共有"
+            ]
         }
         </script>
     </head>
@@ -624,8 +594,8 @@
     <!-- スティッキーフッター（追従CTA） -->
     <div id="sticky-footer" class="sticky-footer">
             <div class="sticky-footer-content">
-        <a href="https://buy.stripe.com/8x228r36d6Gdeg9dTd7ok03" class="cta-button primary large" target="_blank" rel="noopener noreferrer">今すぐ購入</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfA8Vr7X6dY7JiOIg42yjbFMJfaAB3nW_YEZV6onkJA-U0FJw/viewform?usp=dialog" class="cta-button secondary large" target="_blank" rel="noopener noreferrer">無料トライアル</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfA8Vr7X6dY7JiOIg42yjbFMJfaAB3nW_YEZV6onkJA-U0FJw/viewform?usp=dialog" class="cta-button primary large" target="_blank" rel="noopener noreferrer">無料トライアル</a>
+        <a href="contact.html" class="cta-button secondary large">お問い合わせ</a>
     </div>
     </div>
 
