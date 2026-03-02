@@ -1028,6 +1028,7 @@ h3 {
     text-align: center;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    font-size: 11pt;
 }
 
 .comparison-table th:first-child,
@@ -1159,6 +1160,13 @@ h3 {
 .running-cost {
     padding-top: 2rem;
     border-top: 2px solid #eee;
+    text-align: left;
+}
+
+@media (min-width: 769px) {
+    .running-cost {
+        padding-left: 4rem;
+    }
 }
 
 .running-cost p {
@@ -1764,11 +1772,16 @@ h3 {
         height: 2px;
     }
 
-    /* Table Mobile - 全体的にフォントサイズを小さく */
+    /* Table Mobile - 全体的にフォントサイズを小さく（1pt下げ） */
     .comparison-table th,
     .comparison-table td {
-        font-size: 1.4rem;
+        font-size: 1.0rem;
         padding: 1rem 0.5rem;
+    }
+
+    /* Running Cost Mobile - 見出し・保守費用・AI使用料の左余白のみ（※注釈はずらさない） */
+    .running-cost > p:first-child {
+        padding-left: 2rem;
     }
 
     .step p {
