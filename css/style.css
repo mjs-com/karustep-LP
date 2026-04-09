@@ -1842,6 +1842,39 @@ h3 {
         font-size: 1.6rem;
     }
 
+    /* Translator Bonus Section Mobile */
+    .translator-bonus .section-title {
+        font-size: 2.0rem
+    }
+
+    .translator-bonus-badge {
+        font-size: 1.4rem;
+    }
+
+    .translator-bonus-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .translator-bonus-note {
+        font-size: 1.4rem;
+    }
+
+    .translator-bonus-image img {
+        border-radius: 10px;
+    }
+
+    .translator-bonus .fp-title {
+        display: block;
+    }
+
+    .translator-bonus .fp-sep {
+        display: none;
+    }
+
+    .translator-bonus .fp-desc {
+        display: block;
+        font-size: 1.4rem;
+    }
 
 }
 
@@ -3164,6 +3197,15 @@ h3 {
 .translator-bonus .feature-point {
     background: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fp-title {
+    font-weight: 700;
+}
+
+.fp-desc {
+    font-weight: 400;
+    font-size: 1.6rem;
 }
 
 .translator-bonus-note {
