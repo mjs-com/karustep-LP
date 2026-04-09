@@ -1074,7 +1074,7 @@ h3 {
 
 .pricing {
     padding: 6rem 0;
-    background: #f4f8ff;  /* より淡い水色に統一 */
+    background: white;
 }
 
 .pricing-card {
@@ -3120,4 +3120,78 @@ h3 {
     .important-note {
         padding: 1.5rem;
     }
+}
+
+/* ===========================
+   Translator Bonus Section
+   =========================== */
+
+.translator-bonus {
+    padding: 6rem 0;
+    background: #f4f8ff;
+}
+
+.translator-bonus-badge {
+    display: block;
+    text-align: center;
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.translator-bonus-image {
+    margin-bottom: 3rem;
+}
+
+.translator-bonus-image img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.translator-bonus-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.translator-bonus .feature-point {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.translator-bonus-note {
+    text-align: center;
+    margin-top: 2.4rem;
+    color: #2c5f7a;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* ===========================
+   Campaign Price Styles
+   =========================== */
+
+.price-amount-new {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+    line-height: 1.2;
+    margin: 0.4rem 0;
+}
+
+.price-original {
+    display: block;
+    font-size: 2.2rem;
+    color: #aaa;
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
 }
