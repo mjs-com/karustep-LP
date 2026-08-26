@@ -84,6 +84,11 @@ h3 {
     font-weight: 700;
 }
 
+.text-black-bold {
+    color: inherit;
+    font-weight: 700;
+}
+
 .text-navy-bold {
     color: #1e3a8a;
     font-weight: 700;
