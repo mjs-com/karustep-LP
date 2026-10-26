@@ -1,0 +1,9 @@
+# Consolidate HTTP and explicit index.html URLs on the canonical HTTPS URL.
+RewriteEngine On
+
+# THE_REQUEST matches only client requests, not DirectoryIndex's internal rewrite.
+RewriteCond %{THE_REQUEST} \s/+karustep-LP/index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://mjs.main.jp/karustep-LP/ [R=301,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://mjs.main.jp%{REQUEST_URI} [R=301,L]
