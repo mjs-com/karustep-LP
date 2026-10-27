@@ -1,0 +1,277 @@
+.patient-page {
+    color: #263d48;
+    overflow-x: visible;
+}
+
+.patient-page a {
+    color: #17647d;
+    text-underline-offset: 0.2em;
+}
+
+.patient-page a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.patient-page a:focus-visible {
+    outline: 3px solid #17647d;
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+.patient-skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 10;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    transform: translateY(-120%);
+}
+
+.patient-skip-link:focus {
+    transform: translateY(0);
+}
+
+.patient-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 2.2rem 2.4rem;
+    border-bottom: 1px solid #dce7ec;
+}
+
+.patient-header img {
+    width: 160px;
+    height: auto;
+}
+
+.patient-header p {
+    color: #526c79;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+}
+
+.patient-main {
+    padding: 0 2.4rem 4rem;
+}
+
+.patient-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    color: #526c79;
+}
+
+.patient-download {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+    padding: 2rem;
+    background: #f0f7f9;
+    border: 1px solid #dce9ee;
+    border-radius: 12px;
+}
+
+.patient-download-title {
+    color: #214c60;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.patient-download-detail {
+    margin-top: 0.4rem;
+    color: #526c79;
+    font-size: 1.3rem;
+}
+
+.patient-page .patient-download-button {
+    display: block;
+    padding: 1.4rem 1rem;
+    border: 1px solid #17647d;
+    border-radius: 7px;
+    background: #17647d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.patient-download-button:hover {
+    background: #124e62;
+}
+
+.patient-leaflet {
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+.patient-leaflet h1 {
+    margin-bottom: 3rem;
+    color: #214c60;
+    text-align: center;
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+    line-height: 1.5;
+}
+
+.patient-leaflet h2 {
+    margin-bottom: 1.6rem;
+    color: #214c60;
+    font-size: 1.7rem;
+    line-height: 1.8;
+}
+
+.patient-letter p + p {
+    margin-top: 1.6rem;
+}
+
+.patient-contact {
+    margin-top: 2.4rem;
+    padding: 2rem;
+    background: #f7f9fa;
+    border-radius: 8px;
+}
+
+.patient-contact h2 {
+    margin-bottom: 0.8rem;
+}
+
+.patient-security {
+    margin-top: 3.6rem;
+    padding-top: 3rem;
+    border-top: 1px solid #dce7ec;
+}
+
+.patient-security ul {
+    display: grid;
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+    padding: 0;
+    list-style: none;
+}
+
+.patient-security li {
+    display: grid;
+    grid-template-columns: 1.2em minmax(0, 1fr);
+    gap: 0.4rem;
+}
+
+.patient-bullet {
+    color: #17647d;
+}
+
+.patient-reference {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.9;
+}
+
+.patient-signature {
+    margin-top: 3rem;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.patient-product {
+    margin-top: 4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #dce7ec;
+}
+
+.patient-product h2 {
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.patient-product a {
+    display: inline-block;
+    padding: 0.8rem 0;
+    font-size: 1.5rem;
+}
+
+.patient-footer {
+    padding: 2.4rem;
+    background: #f0f5f7;
+    color: #526c79;
+    font-size: 1.2rem;
+}
+
+.patient-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 2rem;
+    margin-top: 1.2rem;
+}
+
+.patient-footer a {
+    display: inline-block;
+    padding: 0.6rem 0;
+}
+
+@media (max-width: 360px) {
+    .patient-main {
+        padding-right: 1.8rem;
+        padding-left: 1.8rem;
+    }
+
+    .patient-header {
+        padding-right: 1.8rem;
+        padding-left: 1.8rem;
+    }
+
+    .patient-download,
+    .patient-contact {
+        padding: 1.6rem;
+    }
+}
+
+@media print {
+    html,
+    .patient-page {
+        max-width: none;
+        background: #fff;
+    }
+
+    .patient-header,
+    .patient-breadcrumb,
+    .patient-download,
+    .patient-product,
+    .patient-footer,
+    .patient-skip-link {
+        display: none;
+    }
+
+    .patient-main {
+        padding: 0;
+    }
+
+    .patient-leaflet {
+        padding: 0;
+        color: #000;
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+
+    .patient-contact {
+        padding: 0;
+        background: none;
+    }
+
+    .patient-leaflet h1,
+    .patient-leaflet h2,
+    .patient-page a {
+        color: #000;
+    }
+
+    .patient-security li {
+        break-inside: avoid;
+    }
+}
