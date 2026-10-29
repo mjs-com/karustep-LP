@@ -180,23 +180,6 @@
     font-size: 1.4rem;
 }
 
-.patient-product {
-    margin-top: 4rem;
-    padding-top: 2.4rem;
-    border-top: 1px solid #dce7ec;
-}
-
-.patient-product h2 {
-    margin-bottom: 1.2rem;
-    font-size: 1.7rem;
-}
-
-.patient-product a {
-    display: inline-block;
-    padding: 0.8rem 0;
-    font-size: 1.5rem;
-}
-
 .patient-footer {
     padding: 2.4rem;
     background: #f0f5f7;
@@ -243,7 +226,6 @@
     .patient-header,
     .patient-breadcrumb,
     .patient-download,
-    .patient-product,
     .patient-footer,
     .patient-skip-link {
         display: none;
