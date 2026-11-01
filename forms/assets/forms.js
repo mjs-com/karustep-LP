@@ -1,3 +1,4 @@
+import { initializeMeasurement } from './google-measurement.js';
 import { emit, attribution } from './measurement.js';
 
 const type = document.body.dataset.formType;
@@ -169,5 +170,7 @@ async function setupForm() {
 try {
   const response = await fetch('/karustep-LP/forms/assets/config.json', { cache: 'no-store' });
   config = await response.json();
+  // Optional analytics must never prevent a customer from submitting the form.
+  try { initializeMeasurement(config); } catch { /* Keep the form usable. */ }
   await (isComplete ? complete() : setupForm());
 } catch (error) { setStatus(isComplete ? '受付状況を確認できませんでした。再送信せず、時間をおいてこの画面を更新してください。' : error.message, true); }
