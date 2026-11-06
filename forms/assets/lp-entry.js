@@ -2,8 +2,12 @@
 (() => {
   // A single confirmed GA4 destination; legacy GA is disabled before the existing GTM loader.
   Promise.all([import('/karustep-LP/forms/assets/google-measurement.js'),
+    import('/karustep-LP/forms/assets/rentracks.js'),
     fetch('/karustep-LP/forms/assets/config.json', { cache: 'no-store' }).then(r => r.json())])
-    .then(([module, config]) => module.initializeMeasurement(config)).catch(() => {});
+    .then(([module, affiliate, config]) => {
+      try { module.initializeMeasurement(config); } catch { /* Optional. */ }
+      void affiliate.initializeRentracksLanding(config);
+    }).catch(() => {});
   const url = new URL(location.href); const campaign = {};
   for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid']) {
     const value = url.searchParams.get(key);

@@ -1,6 +1,6 @@
 {
   "apiBase": "https://karustep-license-api.onrender.com/karustep-LP/forms/api",
   "measurementEnabled": true,
-  "rentracksEnabled": false,
+  "rentracksEnabled": true,
   "ga4MeasurementId": "G-4VHCT3TX5H"
 }

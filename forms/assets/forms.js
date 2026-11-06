@@ -1,4 +1,5 @@
 import { initializeMeasurement } from './google-measurement.js';
+import { trackRentracksReceipt } from './rentracks.js';
 import { emit, attribution } from './measurement.js';
 
 const type = document.body.dataset.formType;
@@ -40,10 +41,12 @@ async function complete() {
   const copyStatus = document.querySelector('#copy-status');
   if (copyStatus && copyMessages[result.copyStatus]) { copyStatus.textContent = copyMessages[result.copyStatus]; copyStatus.hidden = false; }
   if (!pending.measured) {
-    // This is a local dataLayer hook. Vendor transport is deliberately not configured yet.
+    // GA4 gets fixed event context only; affiliate receipt tracking is separate.
     emit('karustep_form_saved', { ...pending.context, form_type: type, form_id: `karustep_${type}` });
     write(storageKey, { ...pending, measured: true });
   }
+  // Optional affiliate transport cannot block the successful receipt or copy mail.
+  void trackRentracksReceipt(config, result).catch(() => {});
 }
 async function setupForm() {
   const form = document.querySelector('form'); const review = document.querySelector('#review');
