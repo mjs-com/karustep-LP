@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "ai-karte-fixture",
+    "title": "AI カルテの基本と院内での確認手順",
+    "category": "ai-karte-basics",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "診察音声",
+      "AI要約",
+      "文字起こし"
+    ],
+    "description": "AIカルテの基本的な仕組みを、診察音声の文字起こしからAI要約、電子カルテへの転記まで順に整理します。導入前に確認したい院内の記録手順や音声情報の扱い、下書きを確認する際の観点を紹介します。",
+    "status": "published",
+    "publish_date": "2026-11-15",
+    "gbp_posted": false,
+    "source_refs": []
+  }
+]
