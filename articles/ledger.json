@@ -1,1 +1,94 @@
-[]
+[
+ {
+  "slug": "ai-karte-vs-mojiokoshi-20261117",
+  "title": "AI カルテと文字起こしの違いとは？診察音声からカルテができるまでをやさしく解説",
+  "category": "ai-karte-basics",
+  "main_keyword": "AI カルテ",
+  "cluster": [
+   "診察音声",
+   "AI要約",
+   "文字起こし",
+   "音声認識"
+  ],
+  "description": "「AI カルテと文字起こしは何が違うのか」を院長先生向けにやさしく解説します。診察音声をテキストにするだけの文字起こしと、AI要約でカルテの形に整え、電子カルテへの転記まで支援するAI カルテの違いを整理しました。",
+  "status": "queued",
+  "publish_date": "2026-11-17",
+  "gbp_posted": false,
+  "source_refs": [
+   "https://mjs.main.jp/karustep-LP/"
+  ]
+ },
+ {
+  "slug": "ai-scribe-toha-20261118",
+  "title": "AIシュライバーとは？AI カルテ作成を支える仕組みと役割をやさしく解説",
+  "category": "ai-karte-basics",
+  "main_keyword": "AI カルテ",
+  "cluster": [
+   "診察音声",
+   "AI要約",
+   "文字起こし",
+   "音声認識"
+  ],
+  "description": "AIシュライバーとは、診察の記録作成を支援するAIの総称です。診察音声の文字起こしやAI要約、電子カルテへの転記支援など、AI カルテの基礎となる役割と仕組みを、クリニックの院長先生向けにやさしく解説します。",
+  "status": "queued",
+  "publish_date": "2026-11-18",
+  "gbp_posted": false,
+  "source_refs": [
+   "https://mjs.main.jp/karustep-LP/"
+  ]
+ },
+ {
+  "slug": "soap-ai-yakuwari-20261119",
+  "title": "AI カルテとは？SOAP形式の基本とAIが担う役割をわかりやすく解説",
+  "category": "ehr-linkage",
+  "main_keyword": "AI カルテ",
+  "cluster": [
+   "電子カルテ",
+   "転記",
+   "SOAP"
+  ],
+  "description": "SOAP形式のカルテの基本と、AIが担う役割をクリニックの院長向けにわかりやすく解説します。AIは診察音声の文字起こしからAI要約、電子カルテへの転記までの下書きづくりを支援し、最終的な確定は医師が行います。",
+  "status": "queued",
+  "publish_date": "2026-11-19",
+  "gbp_posted": false,
+  "source_refs": [
+   "https://mjs.main.jp/karustep-LP/"
+  ]
+ },
+ {
+  "slug": "dounyu-mae-seiri-20261120",
+  "title": "AI カルテ導入前に整理したい5つのポイント｜作業の流れと診察室の環境づくり",
+  "category": "operations",
+  "main_keyword": "AI カルテ",
+  "cluster": [
+   "フットスイッチ",
+   "音声認識",
+   "診察音声"
+  ],
+  "description": "AI カルテの導入を検討しているクリニックの院長向けに、事前に整理しておきたいカルテ作成の流れ、診察室の録音環境、端末とOS、電子カルテの種類、スタッフとの役割分担の5つの観点を、わかりやすく解説します。",
+  "status": "queued",
+  "publish_date": "2026-11-20",
+  "gbp_posted": false,
+  "source_refs": [
+   "https://mjs.main.jp/karustep-LP/"
+  ]
+ },
+ {
+  "slug": "dounyu-checklist-20261121",
+  "title": "AI カルテ導入前チェックリスト｜院長が確認したいポイント",
+  "category": "operations",
+  "main_keyword": "AI カルテ",
+  "cluster": [
+   "フットスイッチ",
+   "音声認識",
+   "診察音声"
+  ],
+  "description": "AI カルテの導入を検討しているクリニック院長向けに、使用端末やOS、電子カルテとの連携、診察音声を拾うマイク環境、トライアルで確認したい項目など、導入前に押さえておきたいチェックポイントを箇条書きで整理しました。",
+  "status": "queued",
+  "publish_date": "2026-11-21",
+  "gbp_posted": false,
+  "source_refs": [
+   "https://mjs.main.jp/karustep-LP/"
+  ]
+ }
+]
