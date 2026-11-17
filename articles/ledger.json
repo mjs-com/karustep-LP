@@ -13,7 +13,7 @@
     "description": "「AI カルテと文字起こしは何が違うのか」を院長先生向けにやさしく解説します。診察音声をテキストにするだけの文字起こしと、AI要約でカルテの形に整え、電子カルテへの転記まで支援するAI カルテの違いを整理しました。",
     "status": "published",
     "publish_date": "2026-11-17",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
