@@ -2,6 +2,7 @@ name: Publish next article
 on:
   schedule:
     - cron: '0 22 * * *'  # 07:00 JST (moved from 09:00 JST on 2026-11-17 to absorb GitHub schedule delays)
+    - cron: '0 1 * * *'  # 10:00 JST re-kick: if the 07:00 run has not fired by 10:00, this publishes instead (Jun's design, 2026-11-17)
   workflow_dispatch:
 permissions:
   contents: write
