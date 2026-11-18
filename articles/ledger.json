@@ -1,352 +1,352 @@
 [
- {
-  "slug": "ai-karte-vs-mojiokoshi-20261117",
-  "title": "AI カルテと文字起こしの違いとは？診察音声からカルテができるまでをやさしく解説",
-  "category": "ai-karte-basics",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "診察音声",
-   "AI要約",
-   "文字起こし",
-   "音声認識"
-  ],
-  "description": "「AI カルテと文字起こしは何が違うのか」を院長先生向けにやさしく解説します。診察音声をテキストにするだけの文字起こしと、AI要約でカルテの形に整え、電子カルテへの転記まで支援するAI カルテの違いを整理しました。",
-  "status": "published",
-  "publish_date": "2026-11-17",
-  "gbp_posted": true,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "ai-scribe-toha-20261118",
-  "title": "AIシュライバーとは？AI カルテ作成を支える仕組みと役割をやさしく解説",
-  "category": "ai-karte-basics",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "診察音声",
-   "AI要約",
-   "文字起こし",
-   "音声認識"
-  ],
-  "description": "AIシュライバーとは、診察の記録作成を支援するAIの総称です。診察音声の文字起こしやAI要約、電子カルテへの転記支援など、AI カルテの基礎となる役割と仕組みを、クリニックの院長先生向けにやさしく解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-18",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "soap-ai-yakuwari-20261119",
-  "title": "AI カルテとは？SOAP形式の基本とAIが担う役割をわかりやすく解説",
-  "category": "ehr-linkage",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "電子カルテ",
-   "転記",
-   "SOAP"
-  ],
-  "description": "SOAP形式のカルテの基本と、AIが担う役割をクリニックの院長向けにわかりやすく解説します。AIは診察音声の文字起こしからAI要約、電子カルテへの転記までの下書きづくりを支援し、最終的な確定は医師が行います。",
-  "status": "queued",
-  "publish_date": "2026-11-19",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "dounyu-mae-seiri-20261120",
-  "title": "AI カルテ導入前に整理したい5つのポイント｜作業の流れと診察室の環境づくり",
-  "category": "operations",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "フットスイッチ",
-   "音声認識",
-   "診察音声"
-  ],
-  "description": "AI カルテの導入を検討しているクリニックの院長向けに、事前に整理しておきたいカルテ作成の流れ、診察室の録音環境、端末とOS、電子カルテの種類、スタッフとの役割分担の5つの観点を、わかりやすく解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-20",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "dounyu-checklist-20261121",
-  "title": "AI カルテ導入前チェックリスト｜院長が確認したいポイント",
-  "category": "operations",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "フットスイッチ",
-   "音声認識",
-   "診察音声"
-  ],
-  "description": "AI カルテの導入を検討しているクリニック院長向けに、使用端末やOS、電子カルテとの連携、診察音声を拾うマイク環境、トライアルで確認したい項目など、導入前に押さえておきたいチェックポイントを箇条書きで整理しました。",
-  "status": "queued",
-  "publish_date": "2026-11-21",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "karte-nyuryoku-futan-20261122",
-  "title": "AI カルテでカルテ入力の負担を減らす｜診察後の記録作業を見直すポイント",
-  "category": "efficiency",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "カルテ入力",
-   "診療効率化",
-   "残業",
-   "医療DX"
-  ],
-  "description": "診察のたびに発生するカルテ入力は、時間を取られやすい作業です。診察と記録作成を分けて考え、記録の下書きづくりを仕組みに任せるAI カルテの考え方と、診療効率化や残業の見直しにつながるポイントを院長先生向けにわかりやすく解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-22",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "karte-zangyo-20261123",
-  "title": "AI カルテと残業の関係｜診察後のカルテ作成時間をどう変えるか",
-  "category": "efficiency",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "カルテ入力",
-   "診療効率化",
-   "残業",
-   "医療DX"
-  ],
-  "description": "AI カルテと残業の関係を、診察後のカルテ入力の進め方という視点から解説します。ゼロから書く作業を下書きの確認・修正へ変える考え方と、AI カルテ作成支援ツール「カルステップ」の特徴をご紹介します。",
-  "status": "queued",
-  "publish_date": "2026-11-23",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "denshi-karte-renkei-20261124",
-  "title": "AI カルテと電子カルテの連携｜転記の手間を減らす仕組み",
-  "category": "ehr-linkage",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "電子カルテ",
-   "転記",
-   "SOAP"
-  ],
-  "description": "AI カルテは電子カルテの代わりではなく、診察音声から作った下書きを電子カルテへ転記する工程を支援する仕組みです。連携の考え方や相性の良い環境、SOAP形式への整理について、ITが苦手な院長先生にもわかるように解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-24",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "karte-hiyou-naibun-20261125",
-  "title": "AI カルテの初期費用と月額費用｜導入前に知りたい料金の内訳",
-  "category": "cost-subsidy",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "初期費用",
-   "保守",
-   "補助金"
-  ],
-  "description": "AI カルテの導入にかかる初期費用、保守費用、AI使用料の内訳を、ITに詳しくない院長先生にも分かりやすく解説します。カルステップの料金例、Microsoft Azureとの契約、補助金を検討するときの注意点も紹介します。",
-  "status": "queued",
-  "publish_date": "2026-11-25",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "onsei-ninshiki-yoyaku-20261126",
-  "title": "AI カルテの音声認識はここまで進化｜診察音声を要約する仕組み",
-  "category": "ai-karte-basics",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "診察音声",
-   "AI要約",
-   "文字起こし",
-   "音声認識"
-  ],
-  "description": "診察音声を文字にする音声認識と、会話の要点を抜き出すAI要約。AI カルテはこの2つの技術を組み合わせて、SOAP形式などのカルテの下書きを作ります。その仕組みと医師の役割を、専門用語を噛み砕いてわかりやすく解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-26",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "muryo-trial-nagare-20261127",
-  "title": "AI カルテの無料トライアルの流れ｜1週間で確認したいこと",
-  "category": "operations",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "フットスイッチ",
-   "音声認識",
-   "診察音声"
-  ],
-  "description": "AI カルテ「カルステップ」の1週間無料トライアルについて、申し込みから準備、診療での試用、振り返りまでの一般的な流れと、診察音声の聞き取りやフットスイッチの操作性など、期間中に確認したいことを解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-27",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "iryo-dx-kouritsuka-20261128",
-  "title": "医療DXとAI カルテ｜小規模クリニックの診療効率化の進め方",
-  "category": "efficiency",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "カルテ入力",
-   "診療効率化",
-   "残業",
-   "医療DX"
-  ],
-  "description": "AI カルテは、診察音声からカルテの下書きを作り、記録作成を支援する仕組みです。医療DXの考え方をふまえ、少人数で運営する小規模クリニックがカルテ入力などの負担を見直し、診療効率化を少しずつ進める方法を解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-28",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "soap-tenki-nidodegima-20261129",
-  "title": "AI カルテのSOAP要約と電子カルテ転記｜二度手間を防ぐコツ",
-  "category": "ehr-linkage",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "電子カルテ",
-   "転記",
-   "SOAP"
-  ],
-  "description": "AI カルテで診察音声からSOAP形式の下書きを作り、電子カルテへの転記につなげる流れを院長向けに解説します。メモを打ち直す二度手間や転記ミスを防ぐ考え方と、日々の運用のコツをわかりやすくまとめました。",
-  "status": "queued",
-  "publish_date": "2026-11-29",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "hojokin-kihon-20261130",
-  "title": "AI カルテ導入と補助金の基礎知識｜医療DX関連の支援策を確認するポイント",
-  "category": "cost-subsidy",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "初期費用",
-   "保守",
-   "補助金"
-  ],
-  "description": "AI カルテの導入を検討しているクリニックの院長向けに、初期費用や保守の範囲を確認するときに一緒に知っておきたい医療DX関連の補助金の基礎知識と、公募要領で確認するポイント、検討時の注意点をわかりやすく解説します。",
-  "status": "queued",
-  "publish_date": "2026-11-30",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "mukishinryoka-20261201",
-  "title": "AI カルテが向いている診療科とは？診察音声の要約が活きる場面",
-  "category": "ai-karte-basics",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "診察音声",
-   "AI要約",
-   "文字起こし",
-   "音声認識"
-  ],
-  "description": "AI カルテは、診察音声の文字起こしとAI要約でカルテの下書きを作る仕組みです。内科や心療内科など対話の多い診療で活きやすい理由と、処置中心の場面での工夫、向き・不向きを診療スタイルで考える視点を解説します。",
-  "status": "queued",
-  "publish_date": "2026-12-01",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "kanja-doui-hairyo-20261202",
-  "title": "AI カルテ導入時の患者説明と同意｜診察音声を扱うときの配慮",
-  "category": "operations",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "フットスイッチ",
-   "音声認識",
-   "診察音声"
-  ],
-  "description": "AI カルテ導入時に欠かせない患者さんへの説明と同意、診察音声を扱うときの配慮をわかりやすく解説。説明内容の例や院内ルールの共有、フットスイッチで録音を止めやすい運用の考え方も紹介します。",
-  "status": "queued",
-  "publish_date": "2026-12-02",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "shinsatsu-shuchu-20261203",
-  "title": "AI カルテで診察に集中する｜カルテ入力と診察を分ける働き方",
-  "category": "efficiency",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "カルテ入力",
-   "診療効率化",
-   "残業",
-   "医療DX"
-  ],
-  "description": "診察中のカルテ入力で患者さんとの対話に集中しにくいと感じていませんか。診察と記録を分ける働き方と、AI カルテ作成支援ツール「カルステップ」の特徴を、ITが苦手な院長先生にもわかりやすく解説します。",
-  "status": "queued",
-  "publish_date": "2026-12-03",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "tenki-miss-20261204",
-  "title": "電子カルテの転記ミスを減らす｜AI カルテの下書き活用術",
-  "category": "ehr-linkage",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "電子カルテ",
-   "転記",
-   "SOAP"
-  ],
-  "description": "電子カルテへの転記ミスは、手書きメモや別画面の文章を打ち直す工程で起こりがちです。AI カルテの下書きを土台に確認・修正する進め方と、医師による最終確認のコツ、支援ツール「カルステップ」の特徴をわかりやすく紹介します。",
-  "status": "queued",
-  "publish_date": "2026-12-04",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- },
- {
-  "slug": "hiyo-taikoka-20261205",
-  "title": "AI カルテの費用対効果を考える｜保守とAI使用料の見方",
-  "category": "cost-subsidy",
-  "main_keyword": "AI カルテ",
-  "cluster": [
-   "初期費用",
-   "保守",
-   "補助金"
-  ],
-  "description": "AI カルテの費用対効果は、金額だけでなくカルテ作成の手間の減り方なども含めて考えることが大切です。初期費用・保守・AI使用料の見方、補助金を検討するときの注意点、無料トライアルの使い方を院長向けに解説します。",
-  "status": "queued",
-  "publish_date": "2026-12-05",
-  "gbp_posted": false,
-  "source_refs": [
-   "https://mjs.main.jp/karustep-LP/"
-  ]
- }
+  {
+    "slug": "ai-karte-vs-mojiokoshi-20261117",
+    "title": "AI カルテと文字起こしの違いとは？診察音声からカルテができるまでをやさしく解説",
+    "category": "ai-karte-basics",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "診察音声",
+      "AI要約",
+      "文字起こし",
+      "音声認識"
+    ],
+    "description": "「AI カルテと文字起こしは何が違うのか」を院長先生向けにやさしく解説します。診察音声をテキストにするだけの文字起こしと、AI要約でカルテの形に整え、電子カルテへの転記まで支援するAI カルテの違いを整理しました。",
+    "status": "published",
+    "publish_date": "2026-11-17",
+    "gbp_posted": true,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "ai-scribe-toha-20261118",
+    "title": "AIシュライバーとは？AI カルテ作成を支える仕組みと役割をやさしく解説",
+    "category": "ai-karte-basics",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "診察音声",
+      "AI要約",
+      "文字起こし",
+      "音声認識"
+    ],
+    "description": "AIシュライバーとは、診察の記録作成を支援するAIの総称です。診察音声の文字起こしやAI要約、電子カルテへの転記支援など、AI カルテの基礎となる役割と仕組みを、クリニックの院長先生向けにやさしく解説します。",
+    "status": "published",
+    "publish_date": "2026-11-18",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "soap-ai-yakuwari-20261119",
+    "title": "AI カルテとは？SOAP形式の基本とAIが担う役割をわかりやすく解説",
+    "category": "ehr-linkage",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "電子カルテ",
+      "転記",
+      "SOAP"
+    ],
+    "description": "SOAP形式のカルテの基本と、AIが担う役割をクリニックの院長向けにわかりやすく解説します。AIは診察音声の文字起こしからAI要約、電子カルテへの転記までの下書きづくりを支援し、最終的な確定は医師が行います。",
+    "status": "queued",
+    "publish_date": "2026-11-19",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "dounyu-mae-seiri-20261120",
+    "title": "AI カルテ導入前に整理したい5つのポイント｜作業の流れと診察室の環境づくり",
+    "category": "operations",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "フットスイッチ",
+      "音声認識",
+      "診察音声"
+    ],
+    "description": "AI カルテの導入を検討しているクリニックの院長向けに、事前に整理しておきたいカルテ作成の流れ、診察室の録音環境、端末とOS、電子カルテの種類、スタッフとの役割分担の5つの観点を、わかりやすく解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-20",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "dounyu-checklist-20261121",
+    "title": "AI カルテ導入前チェックリスト｜院長が確認したいポイント",
+    "category": "operations",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "フットスイッチ",
+      "音声認識",
+      "診察音声"
+    ],
+    "description": "AI カルテの導入を検討しているクリニック院長向けに、使用端末やOS、電子カルテとの連携、診察音声を拾うマイク環境、トライアルで確認したい項目など、導入前に押さえておきたいチェックポイントを箇条書きで整理しました。",
+    "status": "queued",
+    "publish_date": "2026-11-21",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "karte-nyuryoku-futan-20261122",
+    "title": "AI カルテでカルテ入力の負担を減らす｜診察後の記録作業を見直すポイント",
+    "category": "efficiency",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "カルテ入力",
+      "診療効率化",
+      "残業",
+      "医療DX"
+    ],
+    "description": "診察のたびに発生するカルテ入力は、時間を取られやすい作業です。診察と記録作成を分けて考え、記録の下書きづくりを仕組みに任せるAI カルテの考え方と、診療効率化や残業の見直しにつながるポイントを院長先生向けにわかりやすく解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-22",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "karte-zangyo-20261123",
+    "title": "AI カルテと残業の関係｜診察後のカルテ作成時間をどう変えるか",
+    "category": "efficiency",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "カルテ入力",
+      "診療効率化",
+      "残業",
+      "医療DX"
+    ],
+    "description": "AI カルテと残業の関係を、診察後のカルテ入力の進め方という視点から解説します。ゼロから書く作業を下書きの確認・修正へ変える考え方と、AI カルテ作成支援ツール「カルステップ」の特徴をご紹介します。",
+    "status": "queued",
+    "publish_date": "2026-11-23",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "denshi-karte-renkei-20261124",
+    "title": "AI カルテと電子カルテの連携｜転記の手間を減らす仕組み",
+    "category": "ehr-linkage",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "電子カルテ",
+      "転記",
+      "SOAP"
+    ],
+    "description": "AI カルテは電子カルテの代わりではなく、診察音声から作った下書きを電子カルテへ転記する工程を支援する仕組みです。連携の考え方や相性の良い環境、SOAP形式への整理について、ITが苦手な院長先生にもわかるように解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-24",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "karte-hiyou-naibun-20261125",
+    "title": "AI カルテの初期費用と月額費用｜導入前に知りたい料金の内訳",
+    "category": "cost-subsidy",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "初期費用",
+      "保守",
+      "補助金"
+    ],
+    "description": "AI カルテの導入にかかる初期費用、保守費用、AI使用料の内訳を、ITに詳しくない院長先生にも分かりやすく解説します。カルステップの料金例、Microsoft Azureとの契約、補助金を検討するときの注意点も紹介します。",
+    "status": "queued",
+    "publish_date": "2026-11-25",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "onsei-ninshiki-yoyaku-20261126",
+    "title": "AI カルテの音声認識はここまで進化｜診察音声を要約する仕組み",
+    "category": "ai-karte-basics",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "診察音声",
+      "AI要約",
+      "文字起こし",
+      "音声認識"
+    ],
+    "description": "診察音声を文字にする音声認識と、会話の要点を抜き出すAI要約。AI カルテはこの2つの技術を組み合わせて、SOAP形式などのカルテの下書きを作ります。その仕組みと医師の役割を、専門用語を噛み砕いてわかりやすく解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-26",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "muryo-trial-nagare-20261127",
+    "title": "AI カルテの無料トライアルの流れ｜1週間で確認したいこと",
+    "category": "operations",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "フットスイッチ",
+      "音声認識",
+      "診察音声"
+    ],
+    "description": "AI カルテ「カルステップ」の1週間無料トライアルについて、申し込みから準備、診療での試用、振り返りまでの一般的な流れと、診察音声の聞き取りやフットスイッチの操作性など、期間中に確認したいことを解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-27",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "iryo-dx-kouritsuka-20261128",
+    "title": "医療DXとAI カルテ｜小規模クリニックの診療効率化の進め方",
+    "category": "efficiency",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "カルテ入力",
+      "診療効率化",
+      "残業",
+      "医療DX"
+    ],
+    "description": "AI カルテは、診察音声からカルテの下書きを作り、記録作成を支援する仕組みです。医療DXの考え方をふまえ、少人数で運営する小規模クリニックがカルテ入力などの負担を見直し、診療効率化を少しずつ進める方法を解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-28",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "soap-tenki-nidodegima-20261129",
+    "title": "AI カルテのSOAP要約と電子カルテ転記｜二度手間を防ぐコツ",
+    "category": "ehr-linkage",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "電子カルテ",
+      "転記",
+      "SOAP"
+    ],
+    "description": "AI カルテで診察音声からSOAP形式の下書きを作り、電子カルテへの転記につなげる流れを院長向けに解説します。メモを打ち直す二度手間や転記ミスを防ぐ考え方と、日々の運用のコツをわかりやすくまとめました。",
+    "status": "queued",
+    "publish_date": "2026-11-29",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "hojokin-kihon-20261130",
+    "title": "AI カルテ導入と補助金の基礎知識｜医療DX関連の支援策を確認するポイント",
+    "category": "cost-subsidy",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "初期費用",
+      "保守",
+      "補助金"
+    ],
+    "description": "AI カルテの導入を検討しているクリニックの院長向けに、初期費用や保守の範囲を確認するときに一緒に知っておきたい医療DX関連の補助金の基礎知識と、公募要領で確認するポイント、検討時の注意点をわかりやすく解説します。",
+    "status": "queued",
+    "publish_date": "2026-11-30",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "mukishinryoka-20261201",
+    "title": "AI カルテが向いている診療科とは？診察音声の要約が活きる場面",
+    "category": "ai-karte-basics",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "診察音声",
+      "AI要約",
+      "文字起こし",
+      "音声認識"
+    ],
+    "description": "AI カルテは、診察音声の文字起こしとAI要約でカルテの下書きを作る仕組みです。内科や心療内科など対話の多い診療で活きやすい理由と、処置中心の場面での工夫、向き・不向きを診療スタイルで考える視点を解説します。",
+    "status": "queued",
+    "publish_date": "2026-12-01",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "kanja-doui-hairyo-20261202",
+    "title": "AI カルテ導入時の患者説明と同意｜診察音声を扱うときの配慮",
+    "category": "operations",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "フットスイッチ",
+      "音声認識",
+      "診察音声"
+    ],
+    "description": "AI カルテ導入時に欠かせない患者さんへの説明と同意、診察音声を扱うときの配慮をわかりやすく解説。説明内容の例や院内ルールの共有、フットスイッチで録音を止めやすい運用の考え方も紹介します。",
+    "status": "queued",
+    "publish_date": "2026-12-02",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "shinsatsu-shuchu-20261203",
+    "title": "AI カルテで診察に集中する｜カルテ入力と診察を分ける働き方",
+    "category": "efficiency",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "カルテ入力",
+      "診療効率化",
+      "残業",
+      "医療DX"
+    ],
+    "description": "診察中のカルテ入力で患者さんとの対話に集中しにくいと感じていませんか。診察と記録を分ける働き方と、AI カルテ作成支援ツール「カルステップ」の特徴を、ITが苦手な院長先生にもわかりやすく解説します。",
+    "status": "queued",
+    "publish_date": "2026-12-03",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "tenki-miss-20261204",
+    "title": "電子カルテの転記ミスを減らす｜AI カルテの下書き活用術",
+    "category": "ehr-linkage",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "電子カルテ",
+      "転記",
+      "SOAP"
+    ],
+    "description": "電子カルテへの転記ミスは、手書きメモや別画面の文章を打ち直す工程で起こりがちです。AI カルテの下書きを土台に確認・修正する進め方と、医師による最終確認のコツ、支援ツール「カルステップ」の特徴をわかりやすく紹介します。",
+    "status": "queued",
+    "publish_date": "2026-12-04",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  },
+  {
+    "slug": "hiyo-taikoka-20261205",
+    "title": "AI カルテの費用対効果を考える｜保守とAI使用料の見方",
+    "category": "cost-subsidy",
+    "main_keyword": "AI カルテ",
+    "cluster": [
+      "初期費用",
+      "保守",
+      "補助金"
+    ],
+    "description": "AI カルテの費用対効果は、金額だけでなくカルテ作成の手間の減り方なども含めて考えることが大切です。初期費用・保守・AI使用料の見方、補助金を検討するときの注意点、無料トライアルの使い方を院長向けに解説します。",
+    "status": "queued",
+    "publish_date": "2026-12-05",
+    "gbp_posted": false,
+    "source_refs": [
+      "https://mjs.main.jp/karustep-LP/"
+    ]
+  }
 ]
