@@ -1,7 +1,16 @@
 name: Publish next article
 on:
   schedule:
-    - cron: '0 22 * * *'  # 07:00 JST (moved from 09:00 JST on 2026-11-17 to absorb GitHub schedule delays)
+    # GitHub's schedule event is best-effort: per GitHub Docs it can be delayed
+    # under load (worst at minute 0 / top of the hour) and queued jobs may be
+    # dropped entirely. Measured on this repo: +4h27m late (2026-11-16),
+    # no run at all (2026-11-17), +5h28m late (2026-11-18) with '0 *' crons.
+    # Mitigation: fire twice, off the congested minute 0, both before the
+    # 10:00 JST GBP check that self-heals by manual dispatch if still missing.
+    # publish_next.py publishes at most one due article per run, so the
+    # second run is a no-op when the first one already published.
+    - cron: '17 22 * * *'  # 07:17 JST primary
+    - cron: '47 23 * * *'  # 08:47 JST backstop
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,6 +21,7 @@ jobs:
   publish:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
