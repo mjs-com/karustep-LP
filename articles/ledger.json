@@ -32,7 +32,7 @@
     "description": "AIシュライバーとは、診察の記録作成を支援するAIの総称です。診察音声の文字起こしやAI要約、電子カルテへの転記支援など、AI カルテの基礎となる役割と仕組みを、クリニックの院長先生向けにやさしく解説します。",
     "status": "published",
     "publish_date": "2026-11-18",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
