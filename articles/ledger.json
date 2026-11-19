@@ -50,7 +50,7 @@
     "description": "SOAP形式のカルテの基本と、AIが担う役割をクリニックの院長向けにわかりやすく解説します。AIは診察音声の文字起こしからAI要約、電子カルテへの転記までの下書きづくりを支援し、最終的な確定は医師が行います。",
     "status": "published",
     "publish_date": "2026-11-19",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
