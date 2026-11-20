@@ -68,7 +68,7 @@
     "description": "AI カルテの導入を検討しているクリニックの院長向けに、事前に整理しておきたいカルテ作成の流れ、診察室の録音環境、端末とOS、電子カルテの種類、スタッフとの役割分担の5つの観点を、わかりやすく解説します。",
     "status": "published",
     "publish_date": "2026-11-20",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
