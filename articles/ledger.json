@@ -86,7 +86,7 @@
     "description": "AI カルテの導入を検討しているクリニック院長向けに、使用端末やOS、電子カルテとの連携、診察音声を拾うマイク環境、トライアルで確認したい項目など、導入前に押さえておきたいチェックポイントを箇条書きで整理しました。",
     "status": "published",
     "publish_date": "2026-11-21",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
