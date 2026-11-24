@@ -142,7 +142,7 @@
     "description": "AI カルテは電子カルテの代わりではなく、診察音声から作った下書きを電子カルテへ転記する工程を支援する仕組みです。連携の考え方や相性の良い環境、SOAP形式への整理について、ITが苦手な院長先生にもわかるように解説します。",
     "status": "published",
     "publish_date": "2026-11-24",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
