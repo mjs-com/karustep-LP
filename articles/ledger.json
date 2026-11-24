@@ -158,7 +158,7 @@
       "補助金"
     ],
     "description": "AI カルテの導入にかかる初期費用、保守費用、AI使用料の内訳を、ITに詳しくない院長先生にも分かりやすく解説します。カルステップの料金例、Microsoft Azureとの契約、補助金を検討するときの注意点も紹介します。",
-    "status": "queued",
+    "status": "published",
     "publish_date": "2026-11-25",
     "gbp_posted": false,
     "source_refs": [
