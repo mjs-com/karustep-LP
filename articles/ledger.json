@@ -179,7 +179,7 @@
     "description": "診察音声を文字にする音声認識と、会話の要点を抜き出すAI要約。AI カルテはこの2つの技術を組み合わせて、SOAP形式などのカルテの下書きを作ります。その仕組みと医師の役割を、専門用語を噛み砕いてわかりやすく解説します。",
     "status": "published",
     "publish_date": "2026-11-26",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
