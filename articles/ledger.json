@@ -216,7 +216,7 @@
     "description": "AI カルテは、診察音声からカルテの下書きを作り、記録作成を支援する仕組みです。医療DXの考え方をふまえ、少人数で運営する小規模クリニックがカルテ入力などの負担を見直し、診療効率化を少しずつ進める方法を解説します。",
     "status": "published",
     "publish_date": "2026-11-28",
-    "gbp_posted": false,
+    "gbp_posted": true,
     "source_refs": [
       "https://mjs.main.jp/karustep-LP/"
     ]
